@@ -31,13 +31,13 @@ public class mainframe extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        overviews = new javax.swing.JLabel();
+        storages = new javax.swing.JLabel();
+        services = new javax.swing.JLabel();
+        clients = new javax.swing.JLabel();
+        txt_test = new javax.swing.JLabel();
+        txt_overviews = new javax.swing.JLabel();
+        window = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -46,29 +46,29 @@ public class mainframe extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 51));
 
-        jLabel1.setBackground(new java.awt.Color(58, 68, 88));
-        jLabel1.setText("Overviews");
+        overviews.setBackground(new java.awt.Color(58, 68, 88));
+        overviews.setText("Overviews");
 
-        jLabel3.setBackground(new java.awt.Color(58, 68, 88));
-        jLabel3.setText("Storage");
+        storages.setBackground(new java.awt.Color(58, 68, 88));
+        storages.setText("Storages");
 
-        jLabel2.setBackground(new java.awt.Color(58, 68, 88));
-        jLabel2.setText("Services");
+        services.setBackground(new java.awt.Color(58, 68, 88));
+        services.setText("Services");
 
-        jLabel4.setBackground(new java.awt.Color(58, 68, 88));
-        jLabel4.setText("Clients");
+        clients.setBackground(new java.awt.Color(58, 68, 88));
+        clients.setText("Clients");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("test");
+        txt_test.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        txt_test.setForeground(new java.awt.Color(255, 255, 255));
+        txt_test.setText("test");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Overviews");
+        txt_overviews.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        txt_overviews.setForeground(new java.awt.Color(255, 255, 255));
+        txt_overviews.setText("overviews");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("window");
+        window.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        window.setForeground(new java.awt.Color(255, 255, 255));
+        window.setText("window");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -79,36 +79,35 @@ public class mainframe extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(83, 83, 83)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))))
+                            .addComponent(overviews)
+                            .addComponent(storages)
+                            .addComponent(clients)
+                            .addComponent(services)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8))))
+                            .addComponent(txt_overviews)
+                            .addComponent(txt_test)
+                            .addComponent(window))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel6)
+                .addComponent(txt_test)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_overviews)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(window)
+                .addGap(105, 105, 105)
+                .addComponent(overviews)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel7)
+                .addComponent(services)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(81, 81, 81)
-                .addComponent(jLabel1)
+                .addComponent(storages)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(clients)
                 .addContainerGap(376, Short.MAX_VALUE))
         );
 
@@ -118,7 +117,7 @@ public class mainframe extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 919, Short.MAX_VALUE))
+                .addGap(0, 924, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,14 +168,14 @@ public class mainframe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel clients;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel overviews;
+    private javax.swing.JLabel services;
+    private javax.swing.JLabel storages;
+    private javax.swing.JLabel txt_overviews;
+    private javax.swing.JLabel txt_test;
+    private javax.swing.JLabel window;
     // End of variables declaration//GEN-END:variables
 }

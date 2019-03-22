@@ -3,7 +3,7 @@ package view;
 
 import java.awt.Color;
 
-//sdaadaw
+//sdaadawssss
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -96,7 +96,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(txt_login2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(text_window)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 334, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 339, Short.MAX_VALUE)
                 .addComponent(txt_group)
                 .addContainerGap())
         );
