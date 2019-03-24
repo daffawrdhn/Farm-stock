@@ -55,7 +55,6 @@ public class v_storage extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jScrollBar1 = new javax.swing.JScrollBar();
 
         setPreferredSize(new java.awt.Dimension(830, 680));
         setLayout(null);
@@ -106,9 +105,7 @@ public class v_storage extends javax.swing.JPanel {
 
         jLabel12.setText("Warehouse-JBR03");
 
-        jProgressBar3.setValue(20);
-
-        jLabel13.setText("20%");
+        jLabel13.setText("0%");
 
         jPanel6.setBackground(new java.awt.Color(255, 184, 51));
 
@@ -150,7 +147,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addGroup(inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         inner4Layout.setVerticalGroup(
             inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,15 +170,13 @@ public class v_storage extends javax.swing.JPanel {
         );
 
         add(inner4);
-        inner4.setBounds(20, 290, 320, 90);
+        inner4.setBounds(20, 280, 320, 90);
 
         inner5.setBackground(new java.awt.Color(255, 204, 51));
 
         jLabel14.setText("Warehouse-JBR02");
 
-        jProgressBar4.setValue(89);
-
-        jLabel15.setText("89%");
+        jLabel15.setText("0%");
 
         jPanel7.setBackground(new java.awt.Color(255, 184, 51));
 
@@ -223,7 +218,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addGroup(inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         inner5Layout.setVerticalGroup(
             inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,15 +241,13 @@ public class v_storage extends javax.swing.JPanel {
         );
 
         add(inner5);
-        inner5.setBounds(20, 180, 320, 90);
+        inner5.setBounds(20, 170, 320, 90);
 
         inner6.setBackground(new java.awt.Color(255, 204, 51));
 
         jLabel16.setText("Warehouse-JBR01");
 
-        jProgressBar5.setValue(75);
-
-        jLabel17.setText("75%");
+        jLabel17.setText("0%");
 
         jPanel8.setBackground(new java.awt.Color(255, 184, 51));
 
@@ -292,11 +285,11 @@ public class v_storage extends javax.swing.JPanel {
                         .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel17)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(inner6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         inner6Layout.setVerticalGroup(
             inner6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,7 +308,7 @@ public class v_storage extends javax.swing.JPanel {
         );
 
         add(inner6);
-        inner6.setBounds(20, 80, 320, 90);
+        inner6.setBounds(20, 70, 320, 90);
 
         jPanel2.setBackground(new java.awt.Color(255, 184, 51));
 
@@ -339,7 +332,7 @@ public class v_storage extends javax.swing.JPanel {
         );
 
         add(jPanel2);
-        jPanel2.setBounds(170, 400, 60, 60);
+        jPanel2.setBounds(170, 390, 60, 60);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -364,8 +357,6 @@ public class v_storage extends javax.swing.JPanel {
 
         add(jScrollPane1);
         jScrollPane1.setBounds(380, 70, 520, 660);
-        add(jScrollBar1);
-        jScrollBar1.setBounds(340, 80, 15, 300);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -396,7 +387,6 @@ public class v_storage extends javax.swing.JPanel {
     private javax.swing.JProgressBar jProgressBar3;
     private javax.swing.JProgressBar jProgressBar4;
     private javax.swing.JProgressBar jProgressBar5;
-    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
