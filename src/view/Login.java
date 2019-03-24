@@ -117,6 +117,11 @@ public class Login extends javax.swing.JFrame {
         forget.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         forget.setForeground(new java.awt.Color(58, 68, 88));
         forget.setText("forget password");
+        forget.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                forgetMouseClicked(evt);
+            }
+        });
 
         username.setBackground(new java.awt.Color(255, 204, 51));
         username.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -211,6 +216,11 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.out.println("Working!");
     }//GEN-LAST:event_btn_loginMouseClicked
+
+    private void forgetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgetMouseClicked
+        // TODO add your handling code here:
+        System.out.println("reset!");
+    }//GEN-LAST:event_forgetMouseClicked
                                
 
     /**
