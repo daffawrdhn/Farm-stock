@@ -57,7 +57,7 @@ public class v_storage extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(830, 680));
-        setLayout(null);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -98,8 +98,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel1);
-        jPanel1.setBounds(0, 0, 920, 50);
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 50));
 
         inner4.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -169,8 +168,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        add(inner4);
-        inner4.setBounds(20, 280, 320, 90);
+        add(inner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 320, -1));
 
         inner5.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -240,8 +238,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        add(inner5);
-        inner5.setBounds(20, 170, 320, 90);
+        add(inner5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 320, -1));
 
         inner6.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -307,8 +304,7 @@ public class v_storage extends javax.swing.JPanel {
             .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        add(inner6);
-        inner6.setBounds(20, 70, 320, 90);
+        add(inner6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 320, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 184, 51));
 
@@ -331,8 +327,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        add(jPanel2);
-        jPanel2.setBounds(170, 390, 60, 60);
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, 60));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -355,8 +350,7 @@ public class v_storage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        add(jScrollPane1);
-        jScrollPane1.setBounds(380, 70, 520, 660);
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 520, 660));
     }// </editor-fold>//GEN-END:initComponents
 
 

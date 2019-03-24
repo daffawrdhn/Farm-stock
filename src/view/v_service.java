@@ -52,7 +52,7 @@ public class v_service extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(830, 680));
-        setLayout(null);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -93,8 +93,7 @@ public class v_service extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel1);
-        jPanel1.setBounds(0, 0, 920, 50);
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 50));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -180,8 +179,7 @@ public class v_service extends javax.swing.JPanel {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        add(jPanel2);
-        jPanel2.setBounds(20, 70, 420, 110);
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 110));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -193,8 +191,7 @@ public class v_service extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        add(jScrollPane2);
-        jScrollPane2.setBounds(20, 500, 880, 230);
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 880, 230));
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -221,16 +218,13 @@ public class v_service extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(jTable3);
 
-        add(jScrollPane3);
-        jScrollPane3.setBounds(20, 220, 880, 230);
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 880, 230));
 
         jLabel8.setText("Load - Event");
-        add(jLabel8);
-        jLabel8.setBounds(30, 190, 90, 16);
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 90, -1));
 
         jLabel9.setText("Distribute - Event");
-        add(jLabel9);
-        jLabel9.setBounds(30, 470, 120, 16);
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 120, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -263,8 +257,7 @@ public class v_service extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        add(jPanel4);
-        jPanel4.setBounds(460, 70, 110, 110);
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 110, 110));
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -297,8 +290,7 @@ public class v_service extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        add(jPanel5);
-        jPanel5.setBounds(590, 70, 110, 110);
+        add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed

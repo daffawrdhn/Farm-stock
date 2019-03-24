@@ -1,8 +1,13 @@
 package view;
 
 import java.awt.Color;
+import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.Frame;
+import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /*
  * To chan
@@ -16,12 +21,24 @@ ge this license header, choose License Headers in Project Properties.
  * @author daffawrdhn
  */
 public class mainframe extends javax.swing.JFrame {
-
-    /**
-     * Creates new form mainframe
-     */
-    public mainframe() {
+    GridBagLayout layout = new GridBagLayout();
+    
+    v_service l2 ;
+    v_storage l3 ;
+    
+    public mainframe(v_service L2, v_storage L3) {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.l2 = L2;
+        this.l3 = L3;
+        
+        panelLayout.setLayout(layout);
+        panelLayout.add(L2);
+        panelLayout.add(L3);
+        
+        this.l2.setVisible(true);
+        this.l3.setVisible(false);
+        
     }
 
     /**
@@ -32,6 +49,7 @@ public class mainframe extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         side = new javax.swing.JPanel();
         txt_overviews = new javax.swing.JLabel();
@@ -44,18 +62,24 @@ public class mainframe extends javax.swing.JFrame {
         pStorages = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         storages = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        panelLayout = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(112, 680));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         side.setBackground(new java.awt.Color(58, 68, 88));
-        side.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        side.setLayout(new java.awt.GridBagLayout());
 
         txt_overviews.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         txt_overviews.setForeground(new java.awt.Color(255, 255, 255));
         txt_overviews.setText("overview");
-        side.add(txt_overviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 71, -1, -1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(71, 37, 0, 0);
+        side.add(txt_overviews, gridBagConstraints);
 
         pOverviews.setBackground(new java.awt.Color(58, 68, 88));
 
@@ -78,11 +102,17 @@ public class mainframe extends javax.swing.JFrame {
         overviews.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         overviews.setText("Overview");
         overviews.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                overviewsMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 overviewsMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 overviewsMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                overviewsMousePressed(evt);
             }
         });
 
@@ -102,7 +132,15 @@ public class mainframe extends javax.swing.JFrame {
             .addComponent(overviews, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        side.add(pOverviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 250, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 2;
+        gridBagConstraints.ipady = 33;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(155, 0, 0, 0);
+        side.add(pOverviews, gridBagConstraints);
 
         pServices.setBackground(new java.awt.Color(58, 68, 88));
         pServices.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,11 +155,17 @@ public class mainframe extends javax.swing.JFrame {
         services.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         services.setText("Service");
         services.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                servicesMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 servicesMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 servicesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                servicesMousePressed(evt);
             }
         });
 
@@ -156,7 +200,14 @@ public class mainframe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side.add(pServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 339, 250, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 163;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(19, 0, 0, 0);
+        side.add(pServices, gridBagConstraints);
 
         pStorages.setBackground(new java.awt.Color(58, 68, 88));
 
@@ -179,11 +230,17 @@ public class mainframe extends javax.swing.JFrame {
         storages.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         storages.setText("Storage");
         storages.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                storagesMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 storagesMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 storagesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                storagesMousePressed(evt);
             }
         });
 
@@ -205,24 +262,20 @@ public class mainframe extends javax.swing.JFrame {
                     .addComponent(storages, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)))
         );
 
-        side.add(pStorages, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 250, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 16;
+        gridBagConstraints.ipady = 33;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(21, 0, 220, 0);
+        side.add(pStorages, gridBagConstraints);
 
         getContentPane().add(side, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 680));
 
-        jPanel7.setPreferredSize(new java.awt.Dimension(830, 680));
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 830, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 830, 680));
+        panelLayout.setPreferredSize(new java.awt.Dimension(830, 680));
+        getContentPane().add(panelLayout, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 830, 680));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -266,6 +319,57 @@ public class mainframe extends javax.swing.JFrame {
         resetHoverBg(pStorages);
         resetHoverFont(storages);
     }//GEN-LAST:event_storagesMouseExited
+
+    private void overviewsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_overviewsMouseClicked
+
+    private void servicesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMouseClicked
+        // TODO add your handling code here:
+        setHoverBg(pServices);
+        setHoverFont(services);
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        resetHoverBg(pOverviews);
+        resetHoverFont(overviews);
+        this.l2.setVisible(true);
+        this.l3.setVisible(false);
+        
+    }//GEN-LAST:event_servicesMouseClicked
+
+    private void storagesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storagesMouseClicked
+        // TODO add your handling code here:
+        setHoverBg(pStorages);
+        setHoverFont(storages);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+        resetHoverBg(pOverviews);
+        resetHoverFont(overviews);
+        this.l2.setVisible(false);
+        this.l3.setVisible(true);
+        
+    }//GEN-LAST:event_storagesMouseClicked
+
+    private void overviewsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMousePressed
+        // TODO add your handling code here:
+        setHoverBg(pOverviews);
+        setHoverFont(overviews);
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+    }//GEN-LAST:event_overviewsMousePressed
+
+    private void servicesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMousePressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_servicesMousePressed
+
+    private void storagesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storagesMousePressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_storagesMousePressed
     
     
     
@@ -287,7 +391,7 @@ public class mainframe extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -313,8 +417,9 @@ public class mainframe extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new mainframe().setVisible(true);
+            @Override
+            public void run() { 
+                new mainframe(l2, l3).setVisible(true);
             }
         });
     }
@@ -323,11 +428,11 @@ public class mainframe extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel overviews;
     private javax.swing.JPanel pOverviews;
     private javax.swing.JPanel pServices;
     private javax.swing.JPanel pStorages;
+    private javax.swing.JPanel panelLayout;
     private javax.swing.JLabel services;
     private javax.swing.JPanel side;
     private javax.swing.JLabel storages;
