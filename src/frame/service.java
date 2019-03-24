@@ -56,7 +56,7 @@ public class service extends javax.swing.JFrame {
         txt_test6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -97,8 +97,7 @@ public class service extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 920, 50);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 50));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -223,8 +222,7 @@ public class service extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(20, 70, 420, 200);
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 420, 200));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -247,8 +245,7 @@ public class service extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(460, 70, 440, 680);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 440, 680));
 
         jPanel6.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -275,8 +272,7 @@ public class service extends javax.swing.JFrame {
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel6);
-        jPanel6.setBounds(20, 290, 200, 220);
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, 220));
 
         jPanel7.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -303,8 +299,7 @@ public class service extends javax.swing.JFrame {
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel7);
-        jPanel7.setBounds(240, 290, 200, 220);
+        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, -1, 220));
 
         jPanel8.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -331,8 +326,7 @@ public class service extends javax.swing.JFrame {
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel8);
-        jPanel8.setBounds(240, 530, 200, 220);
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 530, -1, -1));
 
         jPanel10.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -359,8 +353,7 @@ public class service extends javax.swing.JFrame {
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel10);
-        jPanel10.setBounds(20, 530, 200, 220);
+        getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

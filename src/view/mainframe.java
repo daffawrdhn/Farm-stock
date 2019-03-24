@@ -30,121 +30,160 @@ public class mainframe extends javax.swing.JFrame {
     private void initComponents() {
 
         side = new javax.swing.JPanel();
-        overviews = new javax.swing.JLabel();
-        storages = new javax.swing.JLabel();
-        services = new javax.swing.JLabel();
-        clients = new javax.swing.JLabel();
-        txt_test = new javax.swing.JLabel();
         txt_overviews = new javax.swing.JLabel();
-        window = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        overviews = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        floor = new javax.swing.JPanel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jPanel4 = new javax.swing.JPanel();
+        services = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        clients = new javax.swing.JLabel();
+        storages = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         side.setBackground(new java.awt.Color(58, 68, 88));
-
-        overviews.setBackground(new java.awt.Color(255, 255, 255));
-        overviews.setForeground(new java.awt.Color(255, 255, 255));
-        overviews.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        overviews.setText("Overview");
-
-        storages.setBackground(new java.awt.Color(255, 255, 255));
-        storages.setForeground(new java.awt.Color(255, 255, 255));
-        storages.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        storages.setText("Storage");
-
-        services.setBackground(new java.awt.Color(255, 255, 255));
-        services.setForeground(new java.awt.Color(255, 255, 255));
-        services.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        services.setText("Service");
-
-        clients.setBackground(new java.awt.Color(255, 255, 255));
-        clients.setForeground(new java.awt.Color(255, 255, 255));
-        clients.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        clients.setText("Client");
-
-        txt_test.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        txt_test.setForeground(new java.awt.Color(255, 255, 255));
-        txt_test.setText("test");
+        side.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_overviews.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         txt_overviews.setForeground(new java.awt.Color(255, 255, 255));
         txt_overviews.setText("overview");
+        side.add(txt_overviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 71, -1, -1));
 
-        window.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        window.setForeground(new java.awt.Color(255, 255, 255));
-        window.setText("window");
+        jPanel2.setBackground(new java.awt.Color(58, 68, 88));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        overviews.setBackground(new java.awt.Color(255, 255, 255));
+        overviews.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        overviews.setForeground(new java.awt.Color(255, 255, 255));
+        overviews.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        overviews.setText("Overview");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(overviews, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(overviews, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        side.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 250, 50));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Worker");
+        side.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 251, 40));
 
-        javax.swing.GroupLayout sideLayout = new javax.swing.GroupLayout(side);
-        side.setLayout(sideLayout);
-        sideLayout.setHorizontalGroup(
-            sideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(sideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_overviews)
-                    .addComponent(txt_test)
-                    .addComponent(window))
-                .addContainerGap(71, Short.MAX_VALUE))
-            .addComponent(storages, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(services, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(overviews, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(clients, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel4.setBackground(new java.awt.Color(58, 68, 88));
+
+        services.setBackground(new java.awt.Color(58, 68, 88));
+        services.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        services.setForeground(new java.awt.Color(255, 255, 255));
+        services.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        services.setText("Service");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
         );
-        sideLayout.setVerticalGroup(
-            sideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(txt_test)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_overviews)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(window)
-                .addGap(105, 105, 105)
-                .addComponent(overviews, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(services, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(storages, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clients, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(340, Short.MAX_VALUE))
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(side);
-        side.setBounds(0, 0, 250, 834);
-
-        floor.setBackground(new java.awt.Color(255, 204, 51));
-        floor.setBounds(new java.awt.Rectangle(0, 0, 1168, 768));
-
-        jDesktopPane1.setBackground(new java.awt.Color(31, 37, 48));
-
-        javax.swing.GroupLayout floorLayout = new javax.swing.GroupLayout(floor);
-        floor.setLayout(floorLayout);
-        floorLayout.setHorizontalGroup(
-            floorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, floorLayout.createSequentialGroup()
-                .addGap(0, 250, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 918, javax.swing.GroupLayout.PREFERRED_SIZE))
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(services, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        floorLayout.setVerticalGroup(
-            floorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(services, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        getContentPane().add(floor);
-        floor.setBounds(0, 0, 1168, 768);
+        side.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 339, 250, 50));
+
+        jPanel5.setBackground(new java.awt.Color(58, 68, 88));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 22, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        clients.setBackground(new java.awt.Color(255, 255, 255));
+        clients.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        clients.setForeground(new java.awt.Color(255, 255, 255));
+        clients.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        clients.setText("Client");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(clients, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(clients, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        side.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 407, 250, 50));
+
+        storages.setBackground(new java.awt.Color(255, 255, 255));
+        storages.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        storages.setForeground(new java.awt.Color(255, 255, 255));
+        storages.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        storages.setText("Storage");
+        side.add(storages, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 220, 50));
+
+        getContentPane().add(side, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,15 +225,17 @@ public class mainframe extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel clients;
-    private javax.swing.JPanel floor;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel overviews;
     private javax.swing.JLabel services;
     private javax.swing.JPanel side;
     private javax.swing.JLabel storages;
     private javax.swing.JLabel txt_overviews;
-    private javax.swing.JLabel txt_test;
-    private javax.swing.JLabel window;
     // End of variables declaration//GEN-END:variables
 }
