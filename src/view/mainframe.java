@@ -23,20 +23,25 @@ ge this license header, choose License Headers in Project Properties.
 public class mainframe extends javax.swing.JFrame {
     GridBagLayout layout = new GridBagLayout();
     
+    v_overview l1;
     v_service l2 ;
     v_storage l3 ;
     
-    public mainframe(v_service L2, v_storage L3) {
+    
+    public mainframe(v_overview L1, v_service L2, v_storage L3) {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.l1 = L1;
         this.l2 = L2;
         this.l3 = L3;
         
         panelLayout.setLayout(layout);
+        panelLayout.add(L1);
         panelLayout.add(L2);
         panelLayout.add(L3);
         
-        this.l2.setVisible(true);
+        this.l1.setVisible(true);
+        this.l2.setVisible(false);
         this.l3.setVisible(false);
         
     }
@@ -322,7 +327,15 @@ public class mainframe extends javax.swing.JFrame {
 
     private void overviewsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMouseClicked
         // TODO add your handling code here:
-        
+        setHoverBg(pOverviews);
+        setHoverFont(overviews);
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+        this.l1.setVisible(true);
+        this.l2.setVisible(false);
+        this.l3.setVisible(false);
     }//GEN-LAST:event_overviewsMouseClicked
 
     private void servicesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMouseClicked
@@ -333,6 +346,7 @@ public class mainframe extends javax.swing.JFrame {
         resetHoverFont(storages);
         resetHoverBg(pOverviews);
         resetHoverFont(overviews);
+        this.l1.setVisible(false);
         this.l2.setVisible(true);
         this.l3.setVisible(false);
         
@@ -346,6 +360,7 @@ public class mainframe extends javax.swing.JFrame {
         resetHoverFont(services);
         resetHoverBg(pOverviews);
         resetHoverFont(overviews);
+        this.l1.setVisible(false);
         this.l2.setVisible(false);
         this.l3.setVisible(true);
         
@@ -353,12 +368,7 @@ public class mainframe extends javax.swing.JFrame {
 
     private void overviewsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMousePressed
         // TODO add your handling code here:
-        setHoverBg(pOverviews);
-        setHoverFont(overviews);
-        resetHoverBg(pStorages);
-        resetHoverFont(storages);
-        resetHoverBg(pServices);
-        resetHoverFont(services);
+        
     }//GEN-LAST:event_overviewsMousePressed
 
     private void servicesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMousePressed
@@ -419,7 +429,7 @@ public class mainframe extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() { 
-                new mainframe(l2, l3).setVisible(true);
+                new mainframe(l1, l2, l3).setVisible(true);
             }
         });
     }
