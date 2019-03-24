@@ -9,12 +9,12 @@ package frame;
  *
  * @author daffawrdhn
  */
-public class storage extends javax.swing.JFrame {
+public class f_storage extends javax.swing.JPanel {
 
     /**
-     * Creates new form overview
+     * Creates new form f_storage
      */
-    public storage() {
+    public f_storage() {
         initComponents();
     }
 
@@ -57,9 +57,8 @@ public class storage extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jScrollBar1 = new javax.swing.JScrollBar();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(830, 680));
-        getContentPane().setLayout(null);
+        setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -100,7 +99,7 @@ public class storage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
+        add(jPanel1);
         jPanel1.setBounds(0, 0, 920, 50);
 
         inner4.setBackground(new java.awt.Color(255, 204, 51));
@@ -173,7 +172,7 @@ public class storage extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        getContentPane().add(inner4);
+        add(inner4);
         inner4.setBounds(20, 290, 320, 90);
 
         inner5.setBackground(new java.awt.Color(255, 204, 51));
@@ -246,7 +245,7 @@ public class storage extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        getContentPane().add(inner5);
+        add(inner5);
         inner5.setBounds(20, 180, 320, 90);
 
         inner6.setBackground(new java.awt.Color(255, 204, 51));
@@ -315,7 +314,7 @@ public class storage extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getContentPane().add(inner6);
+        add(inner6);
         inner6.setBounds(20, 80, 320, 90);
 
         jPanel2.setBackground(new java.awt.Color(255, 184, 51));
@@ -339,7 +338,7 @@ public class storage extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2);
+        add(jPanel2);
         jPanel2.setBounds(170, 400, 60, 60);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -363,49 +362,12 @@ public class storage extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(380, 70, 520, 680);
-        getContentPane().add(jScrollBar1);
+        add(jScrollPane1);
+        jScrollPane1.setBounds(380, 70, 520, 660);
+        add(jScrollBar1);
         jScrollBar1.setBounds(340, 80, 15, 300);
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(storage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(storage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(storage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(storage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new storage().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel inner4;
