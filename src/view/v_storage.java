@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package frame;
+package view;
 
 /**
  *
  * @author daffawrdhn
  */
-public class f_storage extends javax.swing.JPanel {
+public class v_storage extends javax.swing.JPanel {
 
     /**
      * Creates new form f_storage
      */
-    public f_storage() {
+    public v_storage() {
         initComponents();
     }
 

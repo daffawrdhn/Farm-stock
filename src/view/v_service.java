@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package frame;
+package view;
 
 /**
  *
  * @author daffawrdhn
  */
-public class f_service extends javax.swing.JPanel {
+public class v_service extends javax.swing.JPanel {
 
     /**
      * Creates new form f_service
      */
-    public f_service() {
+    public v_service() {
         initComponents();
     }
 
