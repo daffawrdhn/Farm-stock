@@ -77,7 +77,7 @@ public class v_storage_edit extends javax.swing.JPanel {
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(313, 313, 313)
                 .addComponent(jLabel11)
-                .addGap(0, 435, Short.MAX_VALUE))
+                .addGap(0, 441, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +93,7 @@ public class v_storage_edit extends javax.swing.JPanel {
 
         jLabel8.setText("Storage - Edit");
         add(jLabel8);
-        jLabel8.setBounds(30, 70, 90, 16);
+        jLabel8.setBounds(30, 70, 90, 14);
 
         jPanel7.setBackground(new java.awt.Color(255, 204, 51));
 

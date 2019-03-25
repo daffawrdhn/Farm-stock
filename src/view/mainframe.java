@@ -70,6 +70,7 @@ public class mainframe extends javax.swing.JFrame {
         panelLayout = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1080, 720));
         setSize(new java.awt.Dimension(112, 680));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -279,7 +280,7 @@ public class mainframe extends javax.swing.JFrame {
 
         getContentPane().add(side, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 680));
 
-        panelLayout.setPreferredSize(new java.awt.Dimension(830, 680));
+        panelLayout.setPreferredSize(new java.awt.Dimension(830, 720));
         getContentPane().add(panelLayout, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 830, 680));
 
         pack();
