@@ -215,9 +215,10 @@ public class Login extends javax.swing.JFrame {
     private void btn_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_loginMouseClicked
         // TODO add your handling code here:
         System.out.println("Working!");
+        v_overview l1 = new v_overview();
         v_service l2 = new v_service();
         v_storage l3 = new v_storage();
-        mainframe main = new mainframe(l2, l3);
+        mainframe main = new mainframe(l1,l2, l3);
         l2.setVisible(false);
         l3.setVisible(false);
         main.setVisible(true);
