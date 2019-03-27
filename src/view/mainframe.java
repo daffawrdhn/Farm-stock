@@ -327,12 +327,15 @@ public class mainframe extends javax.swing.JFrame {
 
     private void overviewsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMouseClicked
         // TODO add your handling code here:
-        setHoverBg(pServices);
-        setHoverFont(services);
+        setHoverBg(pOverviews);
+        setHoverFont(overviews);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
         resetHoverBg(pStorages);
         resetHoverFont(storages);
-        resetHoverBg(pOverviews);
-        resetHoverFont(overviews);
+        this.l1.setVisible(true);
+        this.l2.setVisible(false);
+        this.l3.setVisible(false);
     }//GEN-LAST:event_overviewsMouseClicked
 
     private void servicesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMouseClicked
