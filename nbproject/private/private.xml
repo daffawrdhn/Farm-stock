@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PROJECT/pbo2/src/view/mainframe.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_storage.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_overview.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_service_load.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_service.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_service_distribute.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_storage_edit.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_storage_info.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/frame/service.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/view/Login.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/frame/storage.java</file>
         </group>
     </open-files>
 </project-private>
