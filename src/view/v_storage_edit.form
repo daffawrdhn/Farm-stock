@@ -31,7 +31,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="-1" height="50"/>
+          <AbsoluteConstraints x="0" y="0" width="920" height="50"/>
         </Constraint>
       </Constraints>
 
@@ -42,7 +42,7 @@
                   <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="435" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="441" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

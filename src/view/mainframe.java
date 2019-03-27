@@ -27,6 +27,10 @@ public class mainframe extends javax.swing.JFrame {
     v_service l2 ;
     v_storage l3 ;
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e1d7d28d522932fbb57ef6914b03cf87fe0fa0a1
     public mainframe(v_overview L1, v_service L2, v_storage L3) {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -69,6 +73,7 @@ public class mainframe extends javax.swing.JFrame {
         panelLayout = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1080, 720));
         setSize(new java.awt.Dimension(112, 680));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -278,7 +283,7 @@ public class mainframe extends javax.swing.JFrame {
 
         getContentPane().add(side, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 680));
 
-        panelLayout.setPreferredSize(new java.awt.Dimension(830, 680));
+        panelLayout.setPreferredSize(new java.awt.Dimension(830, 720));
         getContentPane().add(panelLayout, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 830, 680));
 
         pack();
@@ -326,12 +331,21 @@ public class mainframe extends javax.swing.JFrame {
 
     private void overviewsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMouseClicked
         // TODO add your handling code here:
+<<<<<<< HEAD
         setHoverBg(pServices);
         setHoverFont(services);
         resetHoverBg(pStorages);
         resetHoverFont(storages);
         resetHoverBg(pOverviews);
         resetHoverFont(overviews);
+=======
+        setHoverBg(pOverviews);
+        setHoverFont(overviews);
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+>>>>>>> e1d7d28d522932fbb57ef6914b03cf87fe0fa0a1
         this.l1.setVisible(true);
         this.l2.setVisible(false);
         this.l3.setVisible(false);
@@ -367,12 +381,7 @@ public class mainframe extends javax.swing.JFrame {
 
     private void overviewsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMousePressed
         // TODO add your handling code here:
-        setHoverBg(pOverviews);
-        setHoverFont(overviews);
-        resetHoverBg(pStorages);
-        resetHoverFont(storages);
-        resetHoverBg(pServices);
-        resetHoverFont(services);
+        
     }//GEN-LAST:event_overviewsMousePressed
 
     private void servicesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMousePressed

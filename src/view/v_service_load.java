@@ -89,11 +89,11 @@ public class v_service_load extends javax.swing.JPanel {
         );
 
         add(jPanel1);
-        jPanel1.setBounds(0, 0, 920, 50);
+        jPanel1.setBounds(0, 0, 913, 50);
 
         jLabel8.setText("Load - Event");
         add(jLabel8);
-        jLabel8.setBounds(30, 70, 90, 16);
+        jLabel8.setBounds(30, 70, 90, 14);
 
         jPanel7.setBackground(new java.awt.Color(255, 204, 51));
 

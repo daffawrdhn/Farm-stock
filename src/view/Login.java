@@ -218,7 +218,12 @@ public class Login extends javax.swing.JFrame {
         v_overview l1 = new v_overview();
         v_service l2 = new v_service();
         v_storage l3 = new v_storage();
+<<<<<<< HEAD
         mainframe main = new mainframe(l1,l2, l3);
+=======
+        v_overview l1 = new v_overview();
+        mainframe main = new mainframe(l1 ,l2, l3);
+>>>>>>> e1d7d28d522932fbb57ef6914b03cf87fe0fa0a1
         l2.setVisible(false);
         l3.setVisible(false);
         main.setVisible(true);
