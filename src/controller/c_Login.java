@@ -10,9 +10,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import view.Login;
 import view.mainframe;
+import view.v_help;
 import view.v_overview;
 import view.v_service;
 import view.v_storage;
+import model.m_Login;
 
 /**
  *
@@ -21,12 +23,13 @@ import view.v_storage;
 public class c_Login {
 
     Login login;
-
-    public c_Login(Login v) {
+    m_Login model;
+    
+    public c_Login(Login v, m_Login m) {
         this.login = v;
+        this.model = m;
         
         login.setVisible(true);
-        
         login.getBtnLogin().addActionListener(new ButtonLogin());
     }
 
@@ -37,7 +40,8 @@ public class c_Login {
             v_overview L1 = new v_overview();
             v_service L2 = new v_service();
             v_storage L3 = new v_storage();
-            mainframe mf = new mainframe(L1, L2, L3);
+            v_help L4 = new v_help();
+            mainframe mf = new mainframe(L1, L2, L3,L4);
             login.dispose();
             mf.setVisible(true);
         }

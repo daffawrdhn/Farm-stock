@@ -5,6 +5,7 @@
  */
 package play;
 import controller.c_Login;
+import model.m_Login;
 import view.Login;
 /**
  *
@@ -13,6 +14,7 @@ import view.Login;
 public class play {
     public static void main(String[] args) {
         Login v = new Login();
-        c_Login c = new c_Login(v);
+        m_Login m = new m_Login();
+        c_Login c = new c_Login(v,m);
     }
 }

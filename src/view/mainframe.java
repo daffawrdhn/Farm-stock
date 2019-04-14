@@ -26,22 +26,25 @@ public class mainframe extends javax.swing.JFrame {
     v_overview l1;
     v_service l2 ;
     v_storage l3 ;
+    v_help l4;
     
-    public mainframe(v_overview L1, v_service L2, v_storage L3) {
+    public mainframe(v_overview L1, v_service L2, v_storage L3, v_help L4) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.l1 = L1;
         this.l2 = L2;
         this.l3 = L3;
+        this.l4 = L4;
         
         panelLayout.setLayout(layout);
         panelLayout.add(L1);
         panelLayout.add(L2);
         panelLayout.add(L3);
-        
+        panelLayout.add(L4);
         this.l1.setVisible(true);
         this.l2.setVisible(false);
         this.l3.setVisible(false);
+        this.l4.setVisible(false);
         
     }
 
@@ -53,7 +56,6 @@ public class mainframe extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         side = new javax.swing.JPanel();
         txt_overviews = new javax.swing.JLabel();
@@ -66,25 +68,22 @@ public class mainframe extends javax.swing.JFrame {
         pStorages = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         storages = new javax.swing.JLabel();
+        pHelp = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        help = new javax.swing.JLabel();
         panelLayout = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setSize(new java.awt.Dimension(112, 680));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         side.setBackground(new java.awt.Color(58, 68, 88));
-        side.setLayout(new java.awt.GridBagLayout());
+        side.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_overviews.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         txt_overviews.setForeground(new java.awt.Color(255, 255, 255));
         txt_overviews.setText("overview");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(71, 37, 0, 0);
-        side.add(txt_overviews, gridBagConstraints);
+        side.add(txt_overviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 71, -1, -1));
 
         pOverviews.setBackground(new java.awt.Color(58, 68, 88));
 
@@ -137,15 +136,7 @@ public class mainframe extends javax.swing.JFrame {
             .addComponent(overviews, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 2;
-        gridBagConstraints.ipady = 33;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(155, 0, 0, 0);
-        side.add(pOverviews, gridBagConstraints);
+        side.add(pOverviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
         pServices.setBackground(new java.awt.Color(58, 68, 88));
         pServices.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -205,14 +196,7 @@ public class mainframe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 163;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 0, 0, 0);
-        side.add(pServices, gridBagConstraints);
+        side.add(pServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 339, -1, -1));
 
         pStorages.setBackground(new java.awt.Color(58, 68, 88));
 
@@ -267,20 +251,79 @@ public class mainframe extends javax.swing.JFrame {
                     .addComponent(storages, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)))
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 16;
-        gridBagConstraints.ipady = 33;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 0, 220, 0);
-        side.add(pStorages, gridBagConstraints);
+        side.add(pStorages, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, -1, -1));
 
-        getContentPane().add(side, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 680));
+        pHelp.setBackground(new java.awt.Color(58, 68, 88));
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        help.setBackground(new java.awt.Color(58, 68, 88));
+        help.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        help.setForeground(new java.awt.Color(255, 255, 255));
+        help.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        help.setText("Help");
+        help.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                helpMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                helpMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                helpMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pHelpLayout = new javax.swing.GroupLayout(pHelp);
+        pHelp.setLayout(pHelpLayout);
+        pHelpLayout.setHorizontalGroup(
+            pHelpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pHelpLayout.createSequentialGroup()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(help, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        pHelpLayout.setVerticalGroup(
+            pHelpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pHelpLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(pHelpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(help, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)))
+        );
+
+        side.add(pHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 481, -1, -1));
 
         panelLayout.setPreferredSize(new java.awt.Dimension(830, 720));
-        getContentPane().add(panelLayout, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 830, 680));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(side, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(side, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -333,9 +376,13 @@ public class mainframe extends javax.swing.JFrame {
         resetHoverFont(services);
         resetHoverBg(pStorages);
         resetHoverFont(storages);
+        resetHoverBg(pHelp);
+        resetHoverFont(help);
+        
         this.l1.setVisible(true);
         this.l2.setVisible(false);
         this.l3.setVisible(false);
+        this.l4.setVisible(false);
     }//GEN-LAST:event_overviewsMouseClicked
 
     private void servicesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMouseClicked
@@ -346,10 +393,13 @@ public class mainframe extends javax.swing.JFrame {
         resetHoverFont(storages);
         resetHoverBg(pOverviews);
         resetHoverFont(overviews);
+        resetHoverBg(pHelp);
+        resetHoverFont(help);
+        
         this.l1.setVisible(false);
         this.l2.setVisible(true);
         this.l3.setVisible(false);
-        
+        this.l4.setVisible(false);
     }//GEN-LAST:event_servicesMouseClicked
 
     private void storagesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storagesMouseClicked
@@ -360,9 +410,12 @@ public class mainframe extends javax.swing.JFrame {
         resetHoverFont(services);
         resetHoverBg(pOverviews);
         resetHoverFont(overviews);
+        resetHoverBg(pHelp);
+        resetHoverFont(help);
         this.l1.setVisible(false);
         this.l2.setVisible(false);
         this.l3.setVisible(true);
+        this.l4.setVisible(false);
         
     }//GEN-LAST:event_storagesMouseClicked
 
@@ -380,6 +433,44 @@ public class mainframe extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_storagesMousePressed
+
+    private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
+        // TODO add your handling code here:
+        setHoverBg(pHelp);
+        setHoverFont(help);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        resetHoverBg(pOverviews);
+        resetHoverFont(overviews);
+        this.l1.setVisible(false);
+        this.l2.setVisible(false);
+        this.l3.setVisible(false);
+        this.l4.setVisible(true);
+    }//GEN-LAST:event_helpMouseClicked
+
+    private void helpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseEntered
+        // TODO add your handling code here:
+       setHoverBg(pHelp);
+        setHoverFont(help);
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        resetHoverBg(pOverviews);
+        resetHoverFont(overviews);
+                
+                
+    }//GEN-LAST:event_helpMouseEntered
+
+    private void helpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpMouseExited
+
+    private void helpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpMousePressed
     
     
     
@@ -429,16 +520,19 @@ public class mainframe extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() { 
-                new mainframe(l1, l2, l3).setVisible(true);
+                new mainframe(l1, l2, l3,l4).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel help;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel overviews;
+    private javax.swing.JPanel pHelp;
     private javax.swing.JPanel pOverviews;
     private javax.swing.JPanel pServices;
     private javax.swing.JPanel pStorages;

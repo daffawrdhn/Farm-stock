@@ -4,6 +4,10 @@ package view;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import connector.config;
 
 //sdaadawssss
 /*
@@ -18,9 +22,8 @@ import javax.swing.JTextField;
  */
 public class Login extends javax.swing.JFrame {
     Login login;
-    /**
-     * Creates new form farmframe
-     */
+    Connection conn;
+    ResultSet ressultset;
     public Login() {
         initComponents();
         setBackground(Color.BLACK);
@@ -139,7 +142,8 @@ public class Login extends javax.swing.JFrame {
         password.setBackground(new java.awt.Color(255, 204, 51));
         password.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         password.setForeground(new java.awt.Color(58, 68, 88));
-        password.setText("  Password");
+        password.setText("Password");
+        password.setToolTipText("");
         password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
