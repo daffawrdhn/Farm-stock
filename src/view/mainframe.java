@@ -57,6 +57,7 @@ public class mainframe extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelLayout = new javax.swing.JPanel();
         side = new javax.swing.JPanel();
         txt_overviews = new javax.swing.JLabel();
         pOverviews = new javax.swing.JPanel();
@@ -71,11 +72,14 @@ public class mainframe extends javax.swing.JFrame {
         pHelp = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         help = new javax.swing.JLabel();
-        panelLayout = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setSize(new java.awt.Dimension(112, 680));
+
+        panelLayout.setAlignmentX(0.0F);
+        panelLayout.setAlignmentY(0.0F);
+        panelLayout.setPreferredSize(new java.awt.Dimension(830, 720));
 
         side.setBackground(new java.awt.Color(58, 68, 88));
         side.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -308,21 +312,19 @@ public class mainframe extends javax.swing.JFrame {
 
         side.add(pHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 481, -1, -1));
 
-        panelLayout.setPreferredSize(new java.awt.Dimension(830, 720));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(side, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(side, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(side, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

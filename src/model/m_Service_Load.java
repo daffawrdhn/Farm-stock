@@ -9,6 +9,6 @@ package model;
  *
  * @author albariiqy
  */
-public class m_Service {
+public class m_Service_Load {
     
 }
