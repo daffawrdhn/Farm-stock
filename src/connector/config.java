@@ -6,6 +6,8 @@
 package connector;
 import java.sql.DriverManager;
 import java.sql.Connection;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 /**
  *
  * @author albariiqy
@@ -15,12 +17,14 @@ public class config {
     
     protected Connection connection(){
         try {
-            String username = "postgres";
-            String password = "brianrizqi";
-            String database = "e-waralaba";
-            String url = "jdbc:postgresql://localhost:5432/"+database;
+            String username = "root";
+            String password = "";
+            String database = "farmstock";
+            String url = "jdbc:mysql://localhost/"+database;
             conn = DriverManager.getConnection(url, username, password);
-        } catch (Exception e) {
+            
+        } catch (SQLException e) {
+            
         }
         return conn;
     }

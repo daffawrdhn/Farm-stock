@@ -8,6 +8,9 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import connector.config;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JCheckBox;
 
 //sdaadawssss
 /*
@@ -21,12 +24,28 @@ import connector.config;
  * @author daffawrdhn
  */
 public class Login extends javax.swing.JFrame {
+    Connection connection;
+    Statement statement;
+    ResultSet resultSet;
+    public static int status[];
+//    public static int id;
+    private String user;
+    private String pass;
     Login login;
     Connection conn;
     ResultSet ressultset;
     public Login() {
         initComponents();
         setBackground(Color.BLACK);
+        showPassword.addActionListener(
+                new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae
+            ) {
+                showPassword();
+            }
+        }
+        );
     }
 
     /**
@@ -46,10 +65,10 @@ public class Login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         txt_login = new javax.swing.JLabel();
         txt_desc = new javax.swing.JLabel();
-        forget = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
+        showPassword = new javax.swing.JCheckBox();
+        password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Farm");
@@ -119,35 +138,14 @@ public class Login extends javax.swing.JFrame {
         txt_desc.setForeground(new java.awt.Color(58, 68, 88));
         txt_desc.setText("Uji coba login window aplikasi perkebunan pbo2");
 
-        forget.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
-        forget.setForeground(new java.awt.Color(58, 68, 88));
-        forget.setText("forget password");
-        forget.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                forgetMouseClicked(evt);
-            }
-        });
-
         username.setBackground(new java.awt.Color(255, 204, 51));
         username.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         username.setForeground(new java.awt.Color(58, 68, 88));
-        username.setText("   Username");
+        username.setText("Username");
         username.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
-            }
-        });
-
-        password.setBackground(new java.awt.Color(255, 204, 51));
-        password.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        password.setForeground(new java.awt.Color(58, 68, 88));
-        password.setText("Password");
-        password.setToolTipText("");
-        password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
-        password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
             }
         });
 
@@ -165,6 +163,20 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        showPassword.setBackground(new java.awt.Color(255, 204, 51));
+        showPassword.setForeground(new java.awt.Color(58, 68, 88));
+        showPassword.setText("Tampilkan Password");
+        showPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showPasswordActionPerformed(evt);
+            }
+        });
+
+        password.setBackground(new java.awt.Color(255, 204, 51));
+        password.setForeground(new java.awt.Color(58, 68, 88));
+        password.setText("Password");
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(58, 68, 88)));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -177,13 +189,13 @@ public class Login extends javax.swing.JFrame {
                 .addGap(286, 286, 286))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(forget)
-                        .addGap(69, 69, 69)
+                        .addComponent(showPassword)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                    .addComponent(password))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -195,13 +207,13 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(txt_desc)
                 .addGap(70, 70, 70)
                 .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
+                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(forget)
+                    .addComponent(showPassword)
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(208, 208, 208))
+                .addGap(190, 190, 190))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 0, 620, 520));
@@ -209,23 +221,31 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
-
+    
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameActionPerformed
-
-    private void forgetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgetMouseClicked
-        // TODO add your handling code here:
-        System.out.println("reset!");
-    }//GEN-LAST:event_forgetMouseClicked
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         
     }//GEN-LAST:event_btnLoginActionPerformed
 
+    private void showPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_showPasswordActionPerformed
+
+    public JCheckBox getShowPassword() {
+        return showPassword;
+    }
+    
+    public void showPassword(){
+        if (showPassword.isSelected()) {
+            password.setEchoChar((char) 0);
+        } else {
+            password.setEchoChar('*');
+        }
+    }
+    
     public JButton getBtnLogin(){
         return btnLogin;
     }
@@ -276,10 +296,10 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
-    private javax.swing.JLabel forget;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField password;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JCheckBox showPassword;
     private javax.swing.JLabel text_window;
     private javax.swing.JLabel txt_desc;
     private javax.swing.JLabel txt_group;

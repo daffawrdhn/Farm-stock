@@ -16,7 +16,10 @@ import model.m_Overview;
 import model.m_Service;
 import model.m_Service_Load;
 import model.m_Service_Load;
+import model.m_Service_Distribute;
 import view.mainframe;
+import view.v_pemasok;
+import model.m_pemasok;
 /**
  *
  * @author albariiqy
@@ -33,6 +36,7 @@ public class c_Service {
         
         service.getBtnLoad().addActionListener(new ButtonLoad());
         service.getBtnDistribute().addActionListener(new ButtonDistribute());
+        service.getBtnpemasok().addActionListener(new ButtonPemasok());
         
         
         
@@ -61,9 +65,24 @@ public class c_Service {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            v_service_distribute distribute = new v_service_distribute();
-            distribute.setVisible(true);
+            v_service_distribute v = new v_service_distribute();
+            m_Service_Distribute m = new m_Service_Distribute();
+            c_Service_Distribute distribute = new c_Service_Distribute(v, m);
 //            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
+
+    private static class ButtonPemasok implements ActionListener {
+
+        public ButtonPemasok() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        m_pemasok m = new m_pemasok();
+        v_pemasok v = new v_pemasok();
+        c_pemasok pemasok = new c_pemasok(m, v);
         }
     }
     

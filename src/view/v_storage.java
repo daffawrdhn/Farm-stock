@@ -5,11 +5,37 @@
  */
 package view;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author daffawrdhn
  */
 public class v_storage extends javax.swing.JPanel {
+
+    public JButton getBtnEditwr1() {
+        return btnEditwr1;
+    }
+
+    public JButton getBtnEditwr2() {
+        return btnEditwr2;
+    }
+
+    public JButton getBtnEditwr3() {
+        return btnEditwr3;
+    }
+
+    public JButton getBtnInfowr1() {
+        return btnInfowr1;
+    }
+
+    public JButton getBtnInfowr2() {
+        return btnInfowr2;
+    }
+
+    public JButton getBtnInfowr3() {
+        return btnInfowr3;
+    }
 
     /**
      * Creates new form f_storage
@@ -36,27 +62,25 @@ public class v_storage extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         inner4 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jProgressBar3 = new javax.swing.JProgressBar();
+        percentage03 = new javax.swing.JProgressBar();
         jLabel13 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        btnInfowr3 = new javax.swing.JButton();
+        btnEditwr3 = new javax.swing.JButton();
         inner5 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jProgressBar4 = new javax.swing.JProgressBar();
+        percentage02 = new javax.swing.JProgressBar();
         jLabel15 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnInfowr2 = new javax.swing.JButton();
+        btnEditwr2 = new javax.swing.JButton();
         inner6 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        jProgressBar5 = new javax.swing.JProgressBar();
+        percentage01 = new javax.swing.JProgressBar();
         jLabel17 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         btnInfowr1 = new javax.swing.JButton();
         btnEditwr1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(906, 875));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -144,15 +168,23 @@ public class v_storage extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel8.setForeground(new java.awt.Color(58, 68, 88));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("INFO");
-        jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
+        btnInfowr3.setText("INFO");
+        btnInfowr3.setIconTextGap(0);
+        btnInfowr3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        btnInfowr3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfowr3ActionPerformed(evt);
+            }
+        });
 
-        jLabel9.setForeground(new java.awt.Color(58, 68, 88));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("EDIT");
-        jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
+        btnEditwr3.setText("EDIT");
+        btnEditwr3.setIconTextGap(0);
+        btnEditwr3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        btnEditwr3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditwr3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout inner4Layout = new javax.swing.GroupLayout(inner4);
         inner4.setLayout(inner4Layout);
@@ -164,14 +196,14 @@ public class v_storage extends javax.swing.JPanel {
                 .addGroup(inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addGroup(inner4Layout.createSequentialGroup()
-                        .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(percentage03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13)))
                 .addGap(18, 18, 18)
                 .addGroup(inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(btnEditwr3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInfowr3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         inner4Layout.setVerticalGroup(
             inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,14 +215,16 @@ public class v_storage extends javax.swing.JPanel {
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(percentage03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13)))
                     .addGroup(inner4Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(inner4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnInfowr3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(inner4Layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(btnEditwr3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         inner5.setBackground(new java.awt.Color(255, 204, 51));
@@ -212,15 +246,23 @@ public class v_storage extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel7.setForeground(new java.awt.Color(58, 68, 88));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("EDIT");
-        jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
+        btnInfowr2.setText("INFO");
+        btnInfowr2.setIconTextGap(0);
+        btnInfowr2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        btnInfowr2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfowr2ActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setForeground(new java.awt.Color(58, 68, 88));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("INFO");
-        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
+        btnEditwr2.setText("EDIT");
+        btnEditwr2.setIconTextGap(0);
+        btnEditwr2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        btnEditwr2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditwr2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout inner5Layout = new javax.swing.GroupLayout(inner5);
         inner5.setLayout(inner5Layout);
@@ -232,33 +274,34 @@ public class v_storage extends javax.swing.JPanel {
                 .addGroup(inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
                     .addGroup(inner5Layout.createSequentialGroup()
-                        .addComponent(jProgressBar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(percentage02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel15)))
                 .addGap(18, 18, 18)
                 .addGroup(inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnEditwr2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInfowr2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         inner5Layout.setVerticalGroup(
             inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(inner5Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(percentage02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inner5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnInfowr2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(inner5Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(inner5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jProgressBar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15)))
-                    .addGroup(inner5Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addComponent(btnEditwr2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         inner6.setBackground(new java.awt.Color(255, 204, 51));
@@ -308,7 +351,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addGroup(inner6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16)
                     .addGroup(inner6Layout.createSequentialGroup()
-                        .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(percentage01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel17)))
                 .addGap(18, 18, 18)
@@ -326,7 +369,7 @@ public class v_storage extends javax.swing.JPanel {
                     .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(inner6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(percentage01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(inner6Layout.createSequentialGroup()
@@ -334,26 +377,6 @@ public class v_storage extends javax.swing.JPanel {
                 .addComponent(btnEditwr1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 13, Short.MAX_VALUE))
             .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jPanel2.setBackground(new java.awt.Color(255, 184, 51));
-
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("+");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -367,10 +390,6 @@ public class v_storage extends javax.swing.JPanel {
                     .addComponent(inner4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(inner6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(63, 63, 63))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,9 +400,7 @@ public class v_storage extends javax.swing.JPanel {
                 .addComponent(inner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(inner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addContainerGap(400, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel3);
@@ -401,14 +418,33 @@ public class v_storage extends javax.swing.JPanel {
         System.out.println("edit");
     }//GEN-LAST:event_btnEditwr1ActionPerformed
 
+    private void btnInfowr2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfowr2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInfowr2ActionPerformed
+
+    private void btnEditwr2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditwr2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditwr2ActionPerformed
+
+    private void btnInfowr3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfowr3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInfowr3ActionPerformed
+
+    private void btnEditwr3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditwr3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditwr3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditwr1;
+    private javax.swing.JButton btnEditwr2;
+    private javax.swing.JButton btnEditwr3;
     private javax.swing.JButton btnInfowr1;
+    private javax.swing.JButton btnInfowr2;
+    private javax.swing.JButton btnInfowr3;
     private javax.swing.JPanel inner4;
     private javax.swing.JPanel inner5;
     private javax.swing.JPanel inner6;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -416,30 +452,18 @@ public class v_storage extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JProgressBar jProgressBar3;
-    private javax.swing.JProgressBar jProgressBar4;
-    private javax.swing.JProgressBar jProgressBar5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JProgressBar percentage01;
+    private javax.swing.JProgressBar percentage02;
+    private javax.swing.JProgressBar percentage03;
     // End of variables declaration//GEN-END:variables
 
-    public javax.swing.JButton getBtnEdit() {
-        return btnEditwr1;
-    }
-
-    public javax.swing.JButton getBtnInfo() {
-        return btnInfowr1;
-    }
 }
