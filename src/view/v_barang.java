@@ -44,7 +44,7 @@ public class v_barang extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         berat_barang = new javax.swing.JTextField();
-        pemasok = new javax.swing.JComboBox<>();
+        pemasokcombo = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         submit = new javax.swing.JButton();
         back = new javax.swing.JButton();
@@ -143,8 +143,6 @@ public class v_barang extends javax.swing.JFrame {
             }
         });
 
-        pemasok.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel5.setText("pemasok");
 
         submit.setText("Save");
@@ -172,7 +170,7 @@ public class v_barang extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addComponent(berat_barang, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                                 .addComponent(jLabel4)
-                                .addComponent(pemasok, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(pemasokcombo, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(submit, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
@@ -209,7 +207,7 @@ public class v_barang extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(pemasok, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pemasokcombo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(submit)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -267,12 +265,40 @@ public class v_barang extends javax.swing.JFrame {
         return nama_barang;
     }
 
-    public JComboBox<String> getPemasok() {
-        return pemasok;
+    public JComboBox getPemasok() {
+        return pemasokcombo;
     }
 
     public JButton getSubmit() {
         return submit;
+    }
+
+    public void setJenis_barang(String Jenis_barang) {
+        this.Jenis_barang.setText(Jenis_barang);
+    }
+
+    public void setBack(JButton back) {
+        this.back = back;
+    }
+
+    public void setBerat_barang(String berat_barang) {
+        this.berat_barang.setText(berat_barang);
+    }
+
+    public void setKode_barang(String kode_barang) {
+        this.kode_barang.setText(kode_barang);
+    }
+
+    public void setNama_barang(String nama_barang) {
+        this.nama_barang.setText(nama_barang);
+    }
+
+    public void setPemasokcombo(String pemasokcombo) {
+        this.pemasokcombo.addItem(pemasokcombo);
+    }
+
+    public void setSubmit(JButton submit) {
+        this.submit = submit;
     }
 
     
@@ -325,7 +351,7 @@ public class v_barang extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField kode_barang;
     private javax.swing.JTextField nama_barang;
-    private javax.swing.JComboBox<String> pemasok;
+    private javax.swing.JComboBox<String> pemasokcombo;
     private javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }

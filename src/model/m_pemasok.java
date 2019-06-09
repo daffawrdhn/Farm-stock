@@ -35,7 +35,7 @@ public class m_pemasok extends config {
     
     public void simpanpemasok(String kp,String nm, String alm, String notelp){
         try {
-            String sql = "INSERT INTO supplier (kode_supplier,nama_supp,almt_supp,notlp) values (?,?,?,?)";
+            String sql = "INSERT INTO suppliers (kode_supp,nama_supp,almt_supp,notlp) values (?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, kp);
             ps.setString(2, nm);

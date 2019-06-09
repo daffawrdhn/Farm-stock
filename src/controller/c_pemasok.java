@@ -28,6 +28,19 @@ public class c_pemasok {
         view.setVisible(true);
 
         view.getSubmit().addActionListener(new buttonsubmit());
+        view.getBack().addActionListener(new buttonback());
+    }
+
+    private class buttonback implements ActionListener {
+
+        public buttonback() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        view.dispose();
+        }
     }
 
     private class buttonsubmit implements ActionListener {

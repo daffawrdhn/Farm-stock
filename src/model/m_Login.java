@@ -42,7 +42,7 @@ public class m_Login extends config {
         preparedStatement.setString(2, pass);
         resultSet = preparedStatement.executeQuery();
         resultSet.next();
-        status[0] = resultSet.getInt("user_id");
+        status[0] = resultSet.getInt("id_user");
         status[1] = resultSet.getInt("status");
         System.out.println(status[1]);
         return status;

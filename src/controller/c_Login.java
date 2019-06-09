@@ -25,6 +25,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import model.m_Storage;
+import model.m_Overview;
 
 /**
  *
@@ -91,6 +92,8 @@ public class c_Login {
                             c_Service service = new c_Service(L2, M2);
                             m_Storage M3 = new m_Storage();
                             c_Storage Storage = new c_Storage(L3, M3);
+                            m_Overview M1 = new m_Overview();
+                            c_Overview overview = new c_Overview(M1, L1);
                             break;
                         default:
                             throw new AssertionError();

@@ -220,6 +220,18 @@ public class v_penerima extends javax.swing.JFrame {
         return submit;
     }
 
+    public void setAlamat_penerima(String alamat_penerima) {
+        this.alamat_penerima.setText(alamat_penerima);
+    }
+
+    public void setNama_penerima(String nama_penerima) {
+        this.nama_penerima.setText(nama_penerima);
+    }
+
+    public void setNo_telppenerima(String no_telppenerima) {
+        this.no_telppenerima.setText(no_telppenerima);
+    }
+
     
     
     

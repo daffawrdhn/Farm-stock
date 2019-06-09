@@ -7,7 +7,7 @@ package connector;
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
+
 /**
  *
  * @author albariiqy
@@ -28,4 +28,5 @@ public class config {
         }
         return conn;
     }
+    
 }

@@ -141,7 +141,7 @@ public class Login extends javax.swing.JFrame {
         username.setBackground(new java.awt.Color(255, 204, 51));
         username.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         username.setForeground(new java.awt.Color(58, 68, 88));
-        username.setText("Username");
+        username.setText("admin");
         username.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 68, 88), 1, true));
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,7 +174,7 @@ public class Login extends javax.swing.JFrame {
 
         password.setBackground(new java.awt.Color(255, 204, 51));
         password.setForeground(new java.awt.Color(58, 68, 88));
-        password.setText("Password");
+        password.setText("admin");
         password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(58, 68, 88)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
