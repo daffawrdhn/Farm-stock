@@ -5,7 +5,6 @@
         <group>
             <file>file:/E:/PROJECT/pbo2/src/view/v_overview.java</file>
             <file>file:/E:/PROJECT/pbo2/src/model/m_penerima.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/controller/c_Storage_Info.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/v_service.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_Service_Distribute.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/v_service_distribute.java</file>
@@ -13,25 +12,32 @@
             <file>file:/E:/PROJECT/pbo2/src/model/m_barang.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_Service.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/Login.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/view/v_barang_edit.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/v_storage.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_Overview.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/view/v_penerima_edit.java</file>
             <file>file:/E:/PROJECT/pbo2/src/model/m_Service_Load.java</file>
             <file>file:/E:/PROJECT/pbo2/src/model/m_Overview.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/v_barang.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_Service_Load.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/view/v_pemasok_edit.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_pemasok.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_Login.java</file>
             <file>file:/E:/PROJECT/pbo2/src/model/m_pemasok.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/v_service_load.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_barang.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/view/v_penerima.java</file>
             <file>file:/E:/PROJECT/pbo2/src/connector/config.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_penerima.java</file>
             <file>file:/E:/PROJECT/pbo2/src/model/m_Login.java</file>
             <file>file:/E:/PROJECT/pbo2/src/controller/c_Storage.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_storage_edit.java</file>
-            <file>file:/E:/PROJECT/pbo2/src/view/v_storage_info.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/controller/c_Service_Load_Edit.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/controller/c_penerima_edit.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/mainframe.java</file>
             <file>file:/E:/PROJECT/pbo2/src/view/v_pemasok.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/view/v_service_load_edit.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/controller/c_pemasok_edit.java</file>
+            <file>file:/E:/PROJECT/pbo2/src/model/m_Storage.java</file>
             <file>file:/E:/PROJECT/pbo2/src/model/m_Service.java</file>
             <file>file:/E:/PROJECT/pbo2/src/play/play.java</file>
         </group>

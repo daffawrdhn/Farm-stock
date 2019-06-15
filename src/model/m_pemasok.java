@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import sun.java2d.loops.CompositeType;
 
 /**
@@ -49,4 +50,42 @@ public class m_pemasok extends config {
         }
     
     }
+    
+    public void updatepemasok(int id, String nama, String almat, String notlp ,String kode ){
+        try {
+            String sql = "update suppliers set nama_supp = '" + nama + "', kode_supp = '"+kode+"', almt_supp = '" + almat + "', notlp = '" + notlp + "' where id_supp = " + id;
+            com.mysql.jdbc.PreparedStatement ps = (com.mysql.jdbc.PreparedStatement) connection.prepareStatement(sql);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data berhasil diupdate");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
+    public DefaultTableModel tabellpenerima() {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("Nama Pemasok");
+        model.addColumn("Alamat Pemasok");
+        model.addColumn("Kode pemasok");
+        model.addColumn("No Telp");
+
+        try {
+            String sql = "select * from suppliers";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            while (resultSet.next()) {
+                model.addRow(new Object[]{
+                    resultSet.getInt("id_supp"), resultSet.getString("nama_supp"), resultSet.getString("almt_supp"),resultSet.getString("kode_supp") ,resultSet.getString("notlp")
+                });
+
+            }
+
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return model;
+    }
+
 }

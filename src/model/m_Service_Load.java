@@ -95,8 +95,6 @@ public class m_Service_Load extends config {
         resultSet.next();
         int ava = resultSet.getInt("kapasitas_ava");
 
-        System.out.println(ava);
-
         return ava;
     }
 
@@ -107,7 +105,6 @@ public class m_Service_Load extends config {
         resultSet = ps.executeQuery();
         resultSet.next();
         int jumlah = resultSet.getInt("jml_brg");
-
         return jumlah;
     }
 
@@ -155,9 +152,10 @@ public class m_Service_Load extends config {
             if (sum < cek) {
                 if (cekbarang) {
                     int jbrglama = getjmlbrg(id_brg, id_wh);
+
                     int jbrgbaru = jbrglama + sum;
-                    
-                    String sqldetailupdate = "update detailbarang set jml_brg = '" + jbrgbaru + "' where id_wh = '" + id_wh + "' and  id_brg = '" + id_brg+"'";
+
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + jbrgbaru + "' where id_wh = '" + id_wh + "' and  id_brg = '" + id_brg + "'";
                     PreparedStatement ps = connection.prepareStatement(sqldetailupdate);
                     ps.executeUpdate();
                 } else {
@@ -176,10 +174,10 @@ public class m_Service_Load extends config {
                 JOptionPane.showMessageDialog(null, "gudang penuh atau barang anda melebihi kapasitas tersedia");
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e);
         }
     }
-    
+
     public DefaultTableModel tabelload() {
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("no");
@@ -191,7 +189,7 @@ public class m_Service_Load extends config {
         model.addColumn("Tanggal Load");
         model.addColumn("keterangan");
         try {
-            String sql = "SELECT g.nama_brg,s.nama_supp,g.jenis_brg,concat(w.kode_wh,' - ',w.nama_wh) as gudang, l.jml_brg,l.tgl_load,l.keterangan FROM loaded l JOIN goods g on g.id_brg=l.id_brg join suppliers s on g.id_supp=s.id_supp JOIN warehouse w on l.id_wh=w.id_wh";
+            String sql = "SELECT g.nama_brg,s.nama_supp,g.jenis_brg,concat(w.kode_wh,' - ',w.nama_wh) as gudang, l.jml_brg,l.tgl_load,l.keterangan FROM loaded l JOIN goods g on g.id_brg=l.id_brg join suppliers s on g.id_supp=s.id_supp JOIN warehouse w on l.id_wh=w.id_wh order by l.tgl_load desc";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
 
@@ -199,9 +197,9 @@ public class m_Service_Load extends config {
             while (resultSet.next()) {
                 no++;
                 model.addRow(new Object[]{
-                    no, resultSet.getString("nama_brg"), resultSet.getString("jenis_brg"),resultSet.getInt("jml_brg"),resultSet.getString("gudang"),resultSet.getString("nama_supp"),resultSet.getString("tgl_load"),resultSet.getString("keterangan")
+                    no, resultSet.getString("nama_brg"), resultSet.getString("jenis_brg"), resultSet.getInt("jml_brg"), resultSet.getString("gudang"), resultSet.getString("nama_supp"), resultSet.getString("tgl_load"), resultSet.getString("keterangan")
                 });
-                
+
             }
 
         } catch (Exception e) {
@@ -211,4 +209,104 @@ public class m_Service_Load extends config {
 
     }
 
+    public DefaultTableModel tabelload(int l) {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("Nama Barang");
+        model.addColumn("Jenis Barang");
+        model.addColumn("Jumlah Barang");
+        model.addColumn("Gudang");
+        model.addColumn("Pemasok");
+        model.addColumn("Tanggal Load");
+        model.addColumn("keterangan");
+        try {
+            String sql = "SELECT l.id_load,g.nama_brg,s.nama_supp,g.jenis_brg,concat(w.kode_wh,' - ',w.nama_wh) as gudang, l.jml_brg,l.tgl_load,l.keterangan FROM loaded l JOIN goods g on g.id_brg=l.id_brg join suppliers s on g.id_supp=s.id_supp JOIN warehouse w on l.id_wh=w.id_wh order by l.tgl_load desc";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            int no = 0;
+            while (resultSet.next()) {
+                no++;
+                model.addRow(new Object[]{
+                    resultSet.getInt("id_load"), resultSet.getString("nama_brg"), resultSet.getString("jenis_brg"), resultSet.getInt("jml_brg"), resultSet.getString("gudang"), resultSet.getString("nama_supp"), resultSet.getString("tgl_load"), resultSet.getString("keterangan")
+                });
+
+            }
+
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return model;
+
+    }
+
+    public void updateload(int id, String barang, String gudang, int sum) {
+        try {
+            int idbarang = getidbarang(barang);
+            int idgudang = getidgudang(gudang);
+            String updateload = "update loaded set id_wh = '" + idgudang + "', id_brg = '" + idbarang + "', jml_brg = '" + sum + "' where id_load =" + id;
+            String getjmlload = "select jml_brg,id_wh,id_brg from loaded where id_load = " + id;
+
+            System.out.println(idbarang + " " + idgudang);
+            PreparedStatement getjmlhbrg = connection.prepareStatement(getjmlload);
+            resultSet = getjmlhbrg.executeQuery();
+            resultSet.next();
+
+            int idbrglama = resultSet.getInt("id_brg");
+            int idgdnglama = resultSet.getInt("id_wh");
+
+            int jmlbrglama = resultSet.getInt("jml_brg");
+            int cpctywhlama = whava(idgdnglama);
+            int detaillama = getjmlbrg(idbrglama, idgdnglama);
+            int detailbaru, detailbarubrgitu, cpctybaru;
+            if (idgdnglama == idgudang) {
+                cpctybaru = cpctywhlama + jmlbrglama - sum;
+                updateavawh(cpctybaru, idgdnglama);
+                if (idbrglama == idbarang) {
+                    detailbaru = detaillama - jmlbrglama + sum;
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbaru + "' where id_wh = '" + idgdnglama + "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement ps = connection.prepareStatement(sqldetailupdate);
+                    ps.executeUpdate();
+                } else {
+                    detailbarubrgitu = detaillama - jmlbrglama;
+                    int detailbrgbaru = sum + getjmlbrg(idbarang, idgudang);
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbarubrgitu+ "' where id_wh = '" + idgdnglama + "' and  id_brg = '" + idbrglama+ "'";
+                    PreparedStatement ps = connection.prepareStatement(sqldetailupdate);
+                    ps.executeUpdate();
+                    String sqldetailupdate2 = "update detailbarang set jml_brg = '" + detailbrgbaru+ "' where id_wh = '" + idgudang + "' and  id_brg = '" + idbarang+ "'";
+                    PreparedStatement pf = connection.prepareStatement(sqldetailupdate2);
+                    pf.executeUpdate();
+                }
+
+            } else {
+                cpctybaru = cpctywhlama + jmlbrglama;
+                int cpctywhbaru = whava(idgudang) - sum;
+                updateavawh(cpctywhbaru, idgudang);
+                updateavawh(cpctybaru, idgdnglama);
+                if (idbrglama == idbarang) {
+                    detailbaru = detaillama - jmlbrglama + sum;
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbaru + "' where id_wh = '" + idgudang+ "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement ps = connection.prepareStatement(sqldetailupdate);
+                    ps.executeUpdate();
+                } else {
+                    detailbarubrgitu = detaillama - jmlbrglama;
+                    int detailbrgbaru = sum + getjmlbrg(idbarang, idgudang);
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbarubrgitu+ "' where id_wh = '" + idgdnglama + "' and  id_brg = '" + idbrglama+ "'";
+                    PreparedStatement ps = connection.prepareStatement(sqldetailupdate);
+                    ps.executeUpdate();
+                    String sqldetailupdate2 = "update detailbarang set jml_brg = '" + detailbrgbaru+ "' where id_wh = '" + idgudang + "' and  id_brg = '" + idbarang+ "'";
+                    PreparedStatement pf = connection.prepareStatement(sqldetailupdate2);
+                    pf.executeUpdate();
+                }
+
+            }
+            
+            PreparedStatement pc = connection.prepareStatement(updateload);
+            pc.executeUpdate();
+            JOptionPane.showMessageDialog(null, "data berhasil diubah");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,e);
+        }
+
+    }
 }

@@ -12,20 +12,20 @@ import view.v_overview;
 import view.v_service;
 import view.v_service_load;
 import view.v_service_distribute;
-import view.v_storage;
-import model.m_Login;
-import model.m_Overview;
 import model.m_Service;
 import model.m_Service_Load;
-import model.m_Service_Load;
 import model.m_Service_Distribute;
-import view.mainframe;
 import view.v_pemasok;
 import model.m_pemasok;
 import view.v_barang;
 import model.m_barang;
 import model.m_penerima;
 import view.v_penerima;
+import view.v_service_load_edit;
+import controller.c_Service_Load_Edit;
+import controller.c_penerima_edit;
+import view.v_penerima_edit;
+import view.v_pemasok_edit;
 
 /**
  *
@@ -45,9 +45,55 @@ public class c_Service {
         views.getBtnpemasok().addActionListener(new ButtonPemasok());
         views.getBtnbarang().addActionListener(new ButtonBarang());
         views.getBtnpenerima().addActionListener(new ButtonPenerima());
+        views.getEditload().addActionListener(new btneditload());
+        views.getEditpmasok().addActionListener(new ButtonPemasokEdit());
+        views.getEditpenerima().addActionListener(new ButtonPenerimaEdit());
         views.setTabel(service.getTableload(), model.load());
         views.setTabel(service.getTabledistribute(), model.distribute());
 
+    }
+
+    private static class ButtonPenerimaEdit implements ActionListener {
+
+        public ButtonPenerimaEdit() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            m_penerima m = new m_penerima();
+            v_penerima_edit v = new v_penerima_edit();
+            c_penerima_edit c = new c_penerima_edit(v, m);
+
+        }
+    }
+
+    private class ButtonPemasokEdit implements ActionListener {
+
+        public ButtonPemasokEdit() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        m_pemasok m = new m_pemasok();
+        v_pemasok_edit v = new v_pemasok_edit();
+        c_pemasok_edit c = new c_pemasok_edit(v, m);
+        }
+    }
+
+    private class btneditload implements ActionListener {
+
+        public btneditload() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            v_service_load_edit v = new v_service_load_edit();
+            m_Service_Load m = new m_Service_Load();
+            c_Service_Load_Edit control = new c_Service_Load_Edit(m, v);
+        }
     }
 
     private class ButtonLoad implements ActionListener {
@@ -77,16 +123,15 @@ public class c_Service {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+
             if (views.getDistributecekbox().isSelected()) {
-            v_service_distribute v = new v_service_distribute();
-            m_Service_Distribute m = new m_Service_Distribute();
-            c_Service_Distribute distribute = new c_Service_Distribute(v, m);
-              
-            }
-            else{
-            JOptionPane.showMessageDialog(null, "Distribusi sedang dihentikan");
-            
+                v_service_distribute v = new v_service_distribute();
+                m_Service_Distribute m = new m_Service_Distribute();
+                c_Service_Distribute distribute = new c_Service_Distribute(v, m);
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Distribusi sedang dihentikan");
+
             }
 //              throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }

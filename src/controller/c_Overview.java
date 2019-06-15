@@ -29,11 +29,26 @@ public class c_Overview {
         overview.getBarwh2().setValue(model.datapercentage(2));
         overview.getBarwh3().setMaximum(model.getcapacity(3));
         overview.getBarwh3().setValue(model.datapercentage(3));
-        
-        
-        
+        overview.getRefreshbtn().addActionListener(new btnrefresh());
+
     }
 
+    private class btnrefresh implements ActionListener {
 
+        public btnrefresh() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            overview.getBarwh1().setMaximum(model.getcapacity(1));
+            overview.getBarwh1().setValue(model.datapercentage(1));
+            overview.getBarwh2().setMaximum(model.getcapacity(2));
+            overview.getBarwh2().setValue(model.datapercentage(2));
+            overview.getBarwh3().setMaximum(model.getcapacity(3));
+            overview.getBarwh3().setValue(model.datapercentage(3));
+            overview.getRefreshbtn().addActionListener(new btnrefresh());
+        }
+    }
 
 }

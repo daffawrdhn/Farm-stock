@@ -9,9 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.v_service_load;
 import model.m_Service_Load;
-import controller.c_Service_Distribute;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -37,6 +37,7 @@ public class c_Service_Load {
         views.getlBack().addActionListener(new BackButton());
         views.getlSimpan().addActionListener(new ButtonSimpan());
         views.setTabel(views.getTabelload(), model.tabelload());
+        
 
     }
 

@@ -46,18 +46,23 @@ public class v_service extends javax.swing.JPanel {
         jPanel12 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         BtnLoad = new javax.swing.JButton();
+        editload = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         BtnDistribute = new javax.swing.JButton();
+        editdistribute = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         btnbarang = new javax.swing.JButton();
+        editbrang = new javax.swing.JButton();
         jPanel28 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         btnpemasok = new javax.swing.JButton();
+        editpmasok = new javax.swing.JButton();
         jPanel29 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         btnpenerima = new javax.swing.JButton();
+        editpenerima = new javax.swing.JButton();
 
         setAlignmentX(0.0F);
         setAlignmentY(0.0F);
@@ -325,17 +330,30 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
+        editload.setBackground(new java.awt.Color(255, 204, 51));
+        editload.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        editload.setText("Edit");
+        editload.setBorderPainted(false);
+        editload.setOpaque(false);
+        editload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editloadActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(BtnLoad)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel17)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtnLoad)
+                    .addComponent(editload, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -343,10 +361,11 @@ public class v_service extends javax.swing.JPanel {
                 .addComponent(BtnLoad)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel17)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addComponent(editload, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
         );
 
-        jPanel6.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 60, 80));
+        jPanel6.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 60, 130));
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -364,28 +383,42 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
+        editdistribute.setBackground(new java.awt.Color(255, 204, 51));
+        editdistribute.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        editdistribute.setText("Edit");
+        editdistribute.setBorderPainted(false);
+        editdistribute.setOpaque(false);
+        editdistribute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editdistributeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(BtnDistribute)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel6)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtnDistribute)
+                    .addComponent(editdistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addComponent(BtnDistribute)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel6)
+                .addGap(12, 12, 12)
+                .addComponent(editdistribute, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
         );
 
-        jPanel6.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 60, 80));
+        jPanel6.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, 60, 130));
 
         jPanel13.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -403,28 +436,42 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
+        editbrang.setBackground(new java.awt.Color(255, 204, 51));
+        editbrang.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        editbrang.setText("Edit");
+        editbrang.setBorderPainted(false);
+        editbrang.setOpaque(false);
+        editbrang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbrangActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addComponent(btnbarang)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnbarang)
+                    .addComponent(editbrang, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel18)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addComponent(btnbarang)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(7, 7, 7)
                 .addComponent(jLabel18)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(editbrang, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
         );
 
-        jPanel6.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 60, 80));
+        jPanel6.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, 60, 130));
 
         jPanel28.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -442,28 +489,42 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
+        editpmasok.setBackground(new java.awt.Color(255, 204, 51));
+        editpmasok.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        editpmasok.setText("Edit");
+        editpmasok.setBorderPainted(false);
+        editpmasok.setOpaque(false);
+        editpmasok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editpmasokActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addComponent(btnpemasok)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel37)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnpemasok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editpmasok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
                 .addComponent(btnpemasok)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(editpmasok, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
         );
 
-        jPanel6.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 90, 60, 80));
+        jPanel6.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 60, 130));
 
         jPanel29.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -481,6 +542,17 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
+        editpenerima.setBackground(new java.awt.Color(255, 204, 51));
+        editpenerima.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        editpenerima.setText("Edit");
+        editpenerima.setBorderPainted(false);
+        editpenerima.setOpaque(false);
+        editpenerima.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editpenerimaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
@@ -488,21 +560,25 @@ public class v_service extends javax.swing.JPanel {
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addComponent(btnpenerima)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel38)
-                .addContainerGap())
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editpenerima, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel29Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel38)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
                 .addComponent(btnpenerima)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(7, 7, 7)
                 .addComponent(jLabel38)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(editpenerima, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
         );
 
-        jPanel6.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 90, 60, 80));
+        jPanel6.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 60, 130));
 
         add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -556,6 +632,26 @@ public class v_service extends javax.swing.JPanel {
         this.tableload = tableload;
     }
 
+    public JButton getEditbrang() {
+        return editbrang;
+    }
+
+    public JButton getEditdistribute() {
+        return editdistribute;
+    }
+
+    public JButton getEditload() {
+        return editload;
+    }
+
+    public JButton getEditpenerima() {
+        return editpenerima;
+    }
+
+    public JButton getEditpmasok() {
+        return editpmasok;
+    }
+
 
     private void BtnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDistributeActionPerformed
         // TODO add your handling code here:
@@ -585,6 +681,26 @@ public class v_service extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnpenerimaActionPerformed
 
+    private void editpmasokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editpmasokActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editpmasokActionPerformed
+
+    private void editpenerimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editpenerimaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editpenerimaActionPerformed
+
+    private void editbrangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbrangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editbrangActionPerformed
+
+    private void editloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editloadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editloadActionPerformed
+
+    private void editdistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editdistributeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editdistributeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnDistribute;
@@ -593,6 +709,11 @@ public class v_service extends javax.swing.JPanel {
     private javax.swing.JButton btnpemasok;
     private javax.swing.JButton btnpenerima;
     private javax.swing.JCheckBox distributecekbox;
+    private javax.swing.JButton editbrang;
+    private javax.swing.JButton editdistribute;
+    private javax.swing.JButton editload;
+    private javax.swing.JButton editpenerima;
+    private javax.swing.JButton editpmasok;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
