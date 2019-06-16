@@ -63,6 +63,8 @@ public class v_service extends javax.swing.JPanel {
         jLabel38 = new javax.swing.JLabel();
         btnpenerima = new javax.swing.JButton();
         editpenerima = new javax.swing.JButton();
+        prntdistri = new javax.swing.JButton();
+        prntload = new javax.swing.JButton();
 
         setAlignmentX(0.0F);
         setAlignmentY(0.0F);
@@ -244,31 +246,31 @@ public class v_service extends javax.swing.JPanel {
                 .addGap(44, 44, 44)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                        .addComponent(distributecekbox, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(loadcekbox, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(loadcekbox, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                        .addComponent(distributecekbox, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(94, 94, 94))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(loadcekbox))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(distributecekbox))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
-        jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 110));
+        jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 100));
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -580,6 +582,24 @@ public class v_service extends javax.swing.JPanel {
 
         jPanel6.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 60, 130));
 
+        prntdistri.setBackground(new java.awt.Color(255, 204, 51));
+        prntdistri.setText("Print Distribute");
+        prntdistri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prntdistriActionPerformed(evt);
+            }
+        });
+        jPanel6.add(prntdistri, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 110, 30));
+
+        prntload.setBackground(new java.awt.Color(255, 204, 51));
+        prntload.setText("Print Load");
+        prntload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prntloadActionPerformed(evt);
+            }
+        });
+        jPanel6.add(prntload, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 183, 110, 30));
+
         add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -611,7 +631,7 @@ public class v_service extends javax.swing.JPanel {
     public JButton getBtnpenerima() {
         return btnpenerima;
     }
-
+    
     public void setTabel(JTable t, DefaultTableModel tabel) {
         t.setModel(tabel);
     }
@@ -652,6 +672,16 @@ public class v_service extends javax.swing.JPanel {
         return editpmasok;
     }
 
+    public JButton getPrntdistri() {
+        return prntdistri;
+    }
+
+    public JButton getPrntload() {
+        return prntload;
+    }
+
+    
+    
 
     private void BtnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDistributeActionPerformed
         // TODO add your handling code here:
@@ -701,6 +731,14 @@ public class v_service extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_editdistributeActionPerformed
 
+    private void prntdistriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prntdistriActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_prntdistriActionPerformed
+
+    private void prntloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prntloadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_prntloadActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnDistribute;
@@ -746,6 +784,8 @@ public class v_service extends javax.swing.JPanel {
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JCheckBox loadcekbox;
+    private javax.swing.JButton prntdistri;
+    private javax.swing.JButton prntload;
     private javax.swing.JTable tabledistribute;
     private javax.swing.JTable tableload;
     // End of variables declaration//GEN-END:variables

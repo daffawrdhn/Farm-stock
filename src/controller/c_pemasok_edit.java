@@ -49,14 +49,26 @@ public class c_pemasok_edit {
             try {
                 id = Integer.parseInt(views.getIdpemasok().getText());
             } catch (Exception e) {
-                id=0;
+                id = 0;
             }
 
             if (alamat.equalsIgnoreCase("") || kode.equalsIgnoreCase("") || notlp.equalsIgnoreCase("") || nama.equalsIgnoreCase("")) {
                 JOptionPane.showMessageDialog(views, "Inputan Error/ Data Kosong");
-            
+
+            } else {
+                int jawab = JOptionPane.showOptionDialog(null,
+                        "Anda Yakin Akan Merubah Penerima ini ?",
+                        "Keluar",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE, null, null, null);
+
+                if (jawab == JOptionPane.YES_OPTION) {
+                    model.updatepemasok(id, nama, alamat, notlp, kode);
+//                        JOptionPane.showMessageDialog(null, "Pemasok berhasil disimpan");
+                    views.setTabel(views.getTablepemasok(), model.tabellpenerima());
+                }
             }
-            
+
         }
     }
 
@@ -68,7 +80,7 @@ public class c_pemasok_edit {
         @Override
         public void actionPerformed(ActionEvent e) {
 //            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
+            views.dispose();
         }
     }
 

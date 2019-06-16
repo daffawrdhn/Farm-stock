@@ -51,7 +51,7 @@ public class c_penerima_edit {
             }
 
             if (id == 0 || notlp.equalsIgnoreCase("") || nama.equalsIgnoreCase("") || alamat.equalsIgnoreCase("")) {
-                    JOptionPane.showMessageDialog(null, "Data tidak boleh kosong");
+                JOptionPane.showMessageDialog(null, "Data tidak boleh kosong");
             } else {
                 int jawab = JOptionPane.showOptionDialog(null,
                         "Anda Yakin Akan Merubah Penerima ini ?",
@@ -62,6 +62,7 @@ public class c_penerima_edit {
                 if (jawab == JOptionPane.YES_OPTION) {
                     model.updatepenerima(id, nama, alamat, notlp);
 //                        JOptionPane.showMessageDialog(null, "Pemasok berhasil disimpan");
+                    views.setTabel(views.getTablepenerima(), model.tabellpenerima());
                 }
 
             }

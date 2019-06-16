@@ -5,8 +5,18 @@
  */
 package controller;
 
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfTable;
+import com.lowagie.text.pdf.PdfWriter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import view.v_overview;
 import view.v_service;
@@ -22,10 +32,9 @@ import model.m_barang;
 import model.m_penerima;
 import view.v_penerima;
 import view.v_service_load_edit;
-import controller.c_Service_Load_Edit;
-import controller.c_penerima_edit;
 import view.v_penerima_edit;
 import view.v_pemasok_edit;
+import view.v_barang_edit;
 
 /**
  *
@@ -45,9 +54,14 @@ public class c_Service {
         views.getBtnpemasok().addActionListener(new ButtonPemasok());
         views.getBtnbarang().addActionListener(new ButtonBarang());
         views.getBtnpenerima().addActionListener(new ButtonPenerima());
+        views.getPrntdistri().addActionListener(new PrintDistribute());
+        views.getPrntload().addActionListener(new ButtonPrintLoad());
+        
         views.getEditload().addActionListener(new btneditload());
         views.getEditpmasok().addActionListener(new ButtonPemasokEdit());
         views.getEditpenerima().addActionListener(new ButtonPenerimaEdit());
+        views.getEditbrang().addActionListener(new ButtonBarangEdit());
+        
         views.setTabel(service.getTableload(), model.load());
         views.setTabel(service.getTabledistribute(), model.distribute());
 
@@ -65,6 +79,86 @@ public class c_Service {
             v_penerima_edit v = new v_penerima_edit();
             c_penerima_edit c = new c_penerima_edit(v, m);
 
+        }
+    }
+
+    private static class ButtonBarangEdit implements ActionListener {
+
+        public ButtonBarangEdit() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        m_barang m = new m_barang();
+        v_barang_edit v = new v_barang_edit();
+        c_barang_edit c = new c_barang_edit(v, m);
+        }
+    }
+
+    private static class ButtonPrintLoad implements ActionListener {
+
+        public ButtonPrintLoad() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
+
+    private class PrintDistribute implements ActionListener {
+
+        public PrintDistribute() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String path="";
+            JFileChooser j = new JFileChooser();
+            j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            
+            int x = j.showSaveDialog(views);
+            
+            if (x==JFileChooser.APPROVE_OPTION) {
+                path = j.getSelectedFile().getPath();
+            }
+            
+            Document doc=new Document();
+            
+            try {
+                PdfWriter.getInstance(doc, new FileOutputStream(path+"/abc123.pdf"));
+                doc.open();
+                
+                PdfPTable tb = new PdfPTable(5);
+                tb.addCell("Kegiatan");
+                tb.addCell("Nama Barang");
+
+                tb.addCell("Jumlah Barang");
+                tb.addCell("Gudang");
+                
+                for (int i = 0; i < model.distribute().getRowCount(); i++) {
+                    String kegiatan = "Distribute";
+//                    String nama = views.getTabledistribute().getValueAt(i, 1).toString();
+//                    String jumlah = views.getTabledistribute().getValueAt(i, 3).toString();
+//                    String gudang = views.getTabledistribute().getValueAt(i, 4).toString();
+                    String nama = "almas";
+                    String jumlah = "12";
+                    String gudang = "wh";
+                    tb.addCell(kegiatan);
+                    tb.addCell(nama);
+                    tb.addCell(jumlah);
+                    tb.addCell(gudang);
+                    
+                }
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(c_Service.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (DocumentException ex) {
+                Logger.getLogger(c_Service.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            doc.close();
+            
         }
     }
 

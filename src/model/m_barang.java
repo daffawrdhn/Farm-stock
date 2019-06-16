@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -84,5 +85,45 @@ public class m_barang extends config {
             
         }
     }
+    
+    public void updatebarang(int id, String nama, int brtbrg,String pemasok, String jenis ,String kode ){
+        try {
+            int idpemasok = getidpemasok(pemasok);
+            String sql = "update goods set kode_brg ='"+kode+"', nama_brg='"+nama+"', berat_brg ='"+brtbrg+"', jenis_brg ='"+jenis+"', id_supp ='"+idpemasok+"' where id_brg ='"+id+"'";
+            com.mysql.jdbc.PreparedStatement ps = (com.mysql.jdbc.PreparedStatement) connection.prepareStatement(sql);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data berhasil diupdate");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
 
+    public DefaultTableModel tabelbarang() {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("Nama Barang");
+        model.addColumn("Kode Barang");
+        model.addColumn("Berat Barang");
+        model.addColumn("Jenis Barang");
+        model.addColumn("Pemasok");
+
+        try {
+            String sql = "SELECT g.id_brg,g.kode_brg,g.nama_brg,g.berat_brg,g.jenis_brg,s.nama_supp FROM goods g JOIN suppliers s on g.id_supp=s.id_supp ";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            while (resultSet.next()) {
+                model.addRow(new Object[]{
+                    resultSet.getInt("id_brg"), resultSet.getString("nama_brg"),resultSet.getString("kode_brg"), resultSet.getInt("berat_brg"),resultSet.getString("jenis_brg") ,resultSet.getString("nama_supp")
+                });
+
+            }
+
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return model;
+    }
+
+    
 }
