@@ -25,8 +25,6 @@ public class v_service extends javax.swing.JPanel {
         tabledistribute = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         tableload = new javax.swing.JTable();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -65,6 +63,7 @@ public class v_service extends javax.swing.JPanel {
         editpenerima = new javax.swing.JButton();
         prntdistri = new javax.swing.JButton();
         prntload = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setAlignmentX(0.0F);
         setAlignmentY(0.0F);
@@ -150,12 +149,6 @@ public class v_service extends javax.swing.JPanel {
         jScrollPane3.setViewportView(tableload);
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 840, 230));
-
-        jLabel8.setText("Load - Event");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 90, -1));
-
-        jLabel9.setText("Distribute - Event");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 120, -1));
 
         jPanel6.setBackground(new java.awt.Color(240, 245, 240));
         jPanel6.setPreferredSize(new java.awt.Dimension(870, 680));
@@ -312,10 +305,10 @@ public class v_service extends javax.swing.JPanel {
         jPanel6.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 840, 230));
 
         jLabel15.setText("Load - Event");
-        jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 90, -1));
+        jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 90, -1));
 
         jLabel16.setText("Distribute - Event");
-        jPanel6.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 120, -1));
+        jPanel6.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 100, -1));
 
         jPanel12.setBackground(new java.awt.Color(255, 204, 51));
 
@@ -589,7 +582,7 @@ public class v_service extends javax.swing.JPanel {
                 prntdistriActionPerformed(evt);
             }
         });
-        jPanel6.add(prntdistri, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 110, 30));
+        jPanel6.add(prntdistri, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 110, 30));
 
         prntload.setBackground(new java.awt.Color(255, 204, 51));
         prntload.setText("Print Load");
@@ -598,7 +591,10 @@ public class v_service extends javax.swing.JPanel {
                 prntloadActionPerformed(evt);
             }
         });
-        jPanel6.add(prntload, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 183, 110, 30));
+        jPanel6.add(prntload, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 110, 30));
+
+        jLabel8.setText("Load - Event");
+        jPanel6.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 90, -1));
 
         add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -764,7 +760,6 @@ public class v_service extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;

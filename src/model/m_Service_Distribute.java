@@ -87,7 +87,7 @@ public class m_Service_Distribute extends config {
     }
 
     public int getidpenerima(String penerima) throws SQLException {
-        String sql = "select id_penerima from penerima where nama_penerima = '" + penerima + "'";
+        String sql = "select * from penerima where nama_penerima = '" + penerima + "'";
         PreparedStatement ps = connection.prepareStatement(sql);
         resultSet = ps.executeQuery(sql);
         resultSet.next();
@@ -168,7 +168,7 @@ public class m_Service_Distribute extends config {
             String sql = " SELECT g.nama_brg,g.jenis_brg,d.sum_goods,concat(w.kode_wh,' - ',w.nama_wh) as gudang, p.almt_penerima,p.nama_penerima, d.tgl_distribute, d.keterangan FROM distribute d join goods g on d.id_brg=g.id_brg join penerima p on d.id_penerima=p.id_penerima JOIN warehouse w on d.id_wh=w.id_wh";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
-          
+
             int no = 0;
             while (resultSet.next()) {
                 no++;
@@ -184,5 +184,122 @@ public class m_Service_Distribute extends config {
         return model;
 
     }
+    
+    public DefaultTableModel tabeldistribute(int i) {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("Nama Barang");
+        model.addColumn("Jenis Barang");
+        model.addColumn("Jumlah Barang");
+        model.addColumn("Gudang");
 
+        model.addColumn("Alamat Penerima");
+        model.addColumn("Nama Penerima");
+        model.addColumn("Tanggal Distribute");
+        model.addColumn("keterangan");
+        try {
+            String sql = " SELECT d.id_distribute,g.nama_brg,g.jenis_brg,d.sum_goods,concat(w.kode_wh,' - ',w.nama_wh) as gudang, p.almt_penerima,p.nama_penerima, d.tgl_distribute, d.keterangan FROM distribute d join goods g on d.id_brg=g.id_brg join penerima p on d.id_penerima=p.id_penerima JOIN warehouse w on d.id_wh=w.id_wh";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            int no = 0;
+            while (resultSet.next()) {
+                no++;
+                model.addRow(new Object[]{
+                    resultSet.getInt("id_distribute"), resultSet.getString("nama_brg"), resultSet.getString("jenis_brg"), resultSet.getInt("sum_goods"), resultSet.getString("gudang"), resultSet.getString("almt_penerima"), resultSet.getString("nama_penerima"), resultSet.getString("tgl_distribute"), resultSet.getString("keterangan")
+                });
+
+            }
+
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return model;
+
+    }
+
+    public void upatedistribute(int id, String namabrg, String namawh, String namapnrm, int jmlbrg) {
+        try {
+            
+            m_Service_Load load = new m_Service_Load();
+            int idbrg = load.getidbarang(namabrg);
+            
+            int idwh = load.getidgudang(namawh);
+         
+            int idpenerima = getidpenerima(namapnrm);
+            
+
+            String getjmlh = "select id_brg,id_wh,id_penerima,sum_goods from distribute where id_distribute = '"+id+"'";
+
+            PreparedStatement ps = connection.prepareStatement(getjmlh);
+            resultSet = ps.executeQuery(getjmlh);
+            System.out.println();
+            System.out.println(resultSet.next());
+            
+
+            int idbrglama = resultSet.getInt("id_brg");
+//            System.out.println("idbrg"+idbrglama);
+            int idwhlama = resultSet.getInt("id_wh");
+//            System.out.println("idwh = "+idwhlama);
+            int idpenerimalama = resultSet.getInt("id_penerima");
+//            System.out.println("penerima "+idpenerimalama);
+            int jmllama = resultSet.getInt("sum_goods");
+//            System.out.println("jmlbrg = "+jmllama);
+            int jmlwhlama = load.whava(idwh);
+            int detaillama = load.getjmlbrg(idbrglama, idwhlama);
+            int jmlwh, detailbaru, detailbarubaranglama, detailbarubarangbaru;
+
+            if (idwh == idwhlama) {
+                jmlwh = jmlwhlama + jmllama - jmlbrg;
+                load.updateavawh(jmlwh, idwhlama);
+                if (idbrg == idbrglama) {
+                    detailbaru = detaillama + jmllama - jmlbrg;
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbaru + "' where id_wh = '" + idwhlama + "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement psa = connection.prepareStatement(sqldetailupdate);
+                    psa.executeUpdate();
+                } else {
+                    detailbarubaranglama = detaillama + jmllama;
+                    detailbarubarangbaru = load.getjmlbrg(idbrg, idwh) - jmlbrg;
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbarubaranglama + "' where id_wh = '" + idwhlama + "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement updatedetaillama = connection.prepareStatement(sqldetailupdate);
+                    updatedetaillama.executeUpdate();
+                    String sqldetailupdate2 = "update detailbarang set jml_brg = '" + detailbarubarangbaru + "' where id_wh = '" + idwhlama + "' and  id_brg = '" + idbrg + "'";
+                    PreparedStatement updatedetailbaru = connection.prepareStatement(sqldetailupdate2);
+                    updatedetailbaru.executeUpdate();
+
+                }
+            } else {
+                jmlwh = load.whava(idwhlama) - jmllama;
+                int cpctywhbaru = load.whava(idwh) + jmlbrg;
+                load.updateavawh(jmlwh, idwhlama);
+                load.updateavawh(cpctywhbaru, idwh);
+                if (idbrglama == idbrg) {
+                    int detailwhlamaupdate = load.getjmlbrg(idbrglama, idwhlama) + jmllama;
+                    detailbaru = detaillama + jmllama - jmlbrg;
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbaru + "' where id_wh = '" + idwh + "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement pc = connection.prepareStatement(sqldetailupdate);
+                    pc.executeUpdate();
+                    String sqldetailupdate2 = "update detailbarang set jml_brg = '" + detailwhlamaupdate + "' where id_wh = '" + idwhlama + "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement pa = connection.prepareStatement(sqldetailupdate2);
+                    pa.executeUpdate();
+                } else {
+                    detailbarubaranglama = detaillama + jmllama;
+                    int detailbrgbaru = load.getjmlbrg(idbrg, idwh) - jmlbrg;
+
+                    String sqldetailupdate = "update detailbarang set jml_brg = '" + detailbarubaranglama + "' where id_wh = '" + idwhlama + "' and  id_brg = '" + idbrglama + "'";
+                    PreparedStatement ppe = connection.prepareStatement(sqldetailupdate);
+                    ppe.executeUpdate();
+                    String sqldetailupdate2 = "update detailbarang set jml_brg = '" + detailbrgbaru + "' where id_wh = '" + idwh + "' and  id_brg = '" + idbrg + "'";
+                    PreparedStatement pf = connection.prepareStatement(sqldetailupdate2);
+                    pf.executeUpdate();
+                }
+            }
+            String updatedistribute = "update distribute set id_brg = '" + idbrg + "', id_wh ='" + idwh + "', id_penerima ='" + idpenerima + "', sum_goods ='" + jmlbrg + "' where id_distribute = '"+id+"'";
+            PreparedStatement distribute = connection.prepareStatement(updatedistribute);
+            distribute.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data berhasil diupdate");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
 }
