@@ -59,7 +59,6 @@ public class mainframe extends javax.swing.JFrame {
 
         panelLayout = new javax.swing.JPanel();
         side = new javax.swing.JPanel();
-        txt_overviews = new javax.swing.JLabel();
         pOverviews = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         overviews = new javax.swing.JLabel();
@@ -72,24 +71,25 @@ public class mainframe extends javax.swing.JFrame {
         pHelp = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         help = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txt_test = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setSize(new java.awt.Dimension(112, 680));
+        getContentPane().setLayout(null);
 
+        panelLayout.setBackground(new java.awt.Color(255, 255, 255));
         panelLayout.setAlignmentX(0.0F);
         panelLayout.setAlignmentY(0.0F);
         panelLayout.setPreferredSize(new java.awt.Dimension(830, 720));
+        getContentPane().add(panelLayout);
+        panelLayout.setBounds(250, 0, 906, 875);
 
-        side.setBackground(new java.awt.Color(58, 68, 88));
+        side.setBackground(new java.awt.Color(51, 153, 255));
         side.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txt_overviews.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        txt_overviews.setForeground(new java.awt.Color(255, 255, 255));
-        txt_overviews.setText("overview");
-        side.add(txt_overviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 71, -1, -1));
-
-        pOverviews.setBackground(new java.awt.Color(58, 68, 88));
+        pOverviews.setBackground(new java.awt.Color(102, 204, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -142,14 +142,14 @@ public class mainframe extends javax.swing.JFrame {
 
         side.add(pOverviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
-        pServices.setBackground(new java.awt.Color(58, 68, 88));
+        pServices.setBackground(new java.awt.Color(102, 204, 255));
         pServices.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pServicesMouseEntered(evt);
             }
         });
 
-        services.setBackground(new java.awt.Color(58, 68, 88));
+        services.setBackground(new java.awt.Color(255, 255, 255));
         services.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         services.setForeground(new java.awt.Color(255, 255, 255));
         services.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -202,7 +202,7 @@ public class mainframe extends javax.swing.JFrame {
 
         side.add(pServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 339, -1, -1));
 
-        pStorages.setBackground(new java.awt.Color(58, 68, 88));
+        pStorages.setBackground(new java.awt.Color(102, 204, 255));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -217,23 +217,23 @@ public class mainframe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        storages.setBackground(new java.awt.Color(58, 68, 88));
+        storages.setBackground(new java.awt.Color(255, 255, 255));
         storages.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         storages.setForeground(new java.awt.Color(255, 255, 255));
         storages.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         storages.setText("Storage");
         storages.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                storagesMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 storagesMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                storagesMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 storagesMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                storagesMousePressed(evt);
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                storagesMouseEntered(evt);
             }
         });
 
@@ -257,7 +257,7 @@ public class mainframe extends javax.swing.JFrame {
 
         side.add(pStorages, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, -1, -1));
 
-        pHelp.setBackground(new java.awt.Color(58, 68, 88));
+        pHelp.setBackground(new java.awt.Color(102, 204, 255));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -272,23 +272,23 @@ public class mainframe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        help.setBackground(new java.awt.Color(58, 68, 88));
+        help.setBackground(new java.awt.Color(255, 255, 255));
         help.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         help.setForeground(new java.awt.Color(255, 255, 255));
         help.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         help.setText("Help");
         help.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                helpMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 helpMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                helpMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 helpMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                helpMousePressed(evt);
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                helpMouseEntered(evt);
             }
         });
 
@@ -312,20 +312,16 @@ public class mainframe extends javax.swing.JFrame {
 
         side.add(pHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 481, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(side, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(side, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.png"))); // NOI18N
+        side.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        txt_test.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txt_test.setForeground(new java.awt.Color(255, 255, 255));
+        txt_test.setText("FARMSTOCK.");
+        side.add(txt_test, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
+
+        getContentPane().add(side);
+        side.setBounds(0, 0, 250, 875);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -338,36 +334,63 @@ public class mainframe extends javax.swing.JFrame {
         // TODO add your handling code here:
         setHoverBg(pOverviews);
         setHoverFont(overviews);
+        
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+        
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        
+        resetHoverBg(pHelp);
+        resetHoverFont(help);
     }//GEN-LAST:event_overviewsMouseEntered
 
     private void servicesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMouseEntered
         // TODO add your handling code here:
         setHoverBg(pServices);
         setHoverFont(services);
+
+        resetHoverBg(pStorages);
+        resetHoverFont(storages);
+        
+        resetHoverBg(pOverviews);
+        resetHoverFont(overviews);
+        
+        resetHoverBg(pHelp);
+        resetHoverFont(help);
     }//GEN-LAST:event_servicesMouseEntered
 
     private void storagesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storagesMouseEntered
         // TODO add your handling code here:
         setHoverBg(pStorages);
         setHoverFont(storages);
+
+        resetHoverBg(pServices);
+        resetHoverFont(services);
+        
+        resetHoverBg(pOverviews);
+        resetHoverFont(overviews);
+        
+        resetHoverBg(pHelp);
+        resetHoverFont(help);
     }//GEN-LAST:event_storagesMouseEntered
 
     private void overviewsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMouseExited
         // TODO add your handling code here:
-        resetHoverBg(pOverviews);
-        resetHoverFont(overviews);
+//        resetHoverBg(pOverviews);
+//        resetHoverFont(overviews);
     }//GEN-LAST:event_overviewsMouseExited
 
     private void servicesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servicesMouseExited
         // TODO add your handling code here:
-        resetHoverBg(pServices);
-        resetHoverFont(services);
+//        resetHoverBg(pServices);
+//        resetHoverFont(services);
     }//GEN-LAST:event_servicesMouseExited
 
     private void storagesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storagesMouseExited
         // TODO add your handling code here:
-        resetHoverBg(pStorages);
-        resetHoverFont(storages);
+//        resetHoverBg(pStorages);
+//        resetHoverFont(storages);
     }//GEN-LAST:event_storagesMouseExited
 
     private void overviewsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overviewsMouseClicked
@@ -458,12 +481,12 @@ public class mainframe extends javax.swing.JFrame {
         setHoverFont(help);
         resetHoverBg(pServices);
         resetHoverFont(services);
+        
         resetHoverBg(pStorages);
         resetHoverFont(storages);
+        
         resetHoverBg(pOverviews);
-        resetHoverFont(overviews);
-                
-                
+        resetHoverFont(overviews);             
     }//GEN-LAST:event_helpMouseEntered
 
     private void helpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseExited
@@ -477,15 +500,15 @@ public class mainframe extends javax.swing.JFrame {
     
     
     private void setHoverBg(JPanel jp){
-        jp.setBackground(new Color(255,204,51));
+        jp.setBackground(new Color(0,102,255));
     }
     
     private void resetHoverBg(JPanel jp){
-        jp.setBackground(new Color(58,68,88));
+        jp.setBackground(new Color(102,204,255));
     }
     
     private void setHoverFont(JLabel jl){
-        jl.setForeground(new Color(58,68,88));
+        jl.setForeground(new Color(255,255,255));
     }
     
     private void resetHoverFont(JLabel jl){
@@ -529,6 +552,7 @@ public class mainframe extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel help;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
@@ -542,6 +566,6 @@ public class mainframe extends javax.swing.JFrame {
     private javax.swing.JLabel services;
     private javax.swing.JPanel side;
     private javax.swing.JLabel storages;
-    private javax.swing.JLabel txt_overviews;
+    private javax.swing.JLabel txt_test;
     // End of variables declaration//GEN-END:variables
 }

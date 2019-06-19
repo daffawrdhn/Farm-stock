@@ -74,6 +74,19 @@ public class c_Login {
             String password = login.getPassword().getText();
 
             if (user.equalsIgnoreCase("") || password.equalsIgnoreCase("")) {
+//                            v_overview L1 = new v_overview();
+//                            v_service L2 = new v_service();
+//                            v_storage L3 = new v_storage();
+//                            v_help L4 = new v_help();
+//                            mainframe mf = new mainframe(L1, L2, L3, L4);
+//                            login.dispose();
+//                            mf.setVisible(true);
+//                            m_Service M2 = new m_Service();
+//                            c_Service service = new c_Service(L2, M2);
+//                            m_Storage M3 = new m_Storage();
+//                            c_Storage Storage = new c_Storage(L3, M3);
+//                            m_Overview M1 = new m_Overview();
+//                            c_Overview overview = new c_Overview(M1, L1);
                 JOptionPane.showMessageDialog(null, "Kolom Tidak Boleh Kosong");
 
             } else {

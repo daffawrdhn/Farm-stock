@@ -99,7 +99,7 @@ public class v_storage extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableload = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -128,49 +128,41 @@ public class v_storage extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(906, 875));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel11.setBackground(new java.awt.Color(58, 68, 88));
-        jLabel11.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(58, 68, 88));
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("STORAGE");
 
-        jPanel9.setBackground(new java.awt.Color(255, 184, 51));
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-oil-storage-tank-48.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(313, 313, 313)
+                .addGap(325, 325, 325)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addGap(0, 498, Short.MAX_VALUE))
+                .addContainerGap(456, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 50));
+        add(jPanel1);
+        jPanel1.setBounds(0, 0, 920, 50);
 
         tableload.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -193,15 +185,18 @@ public class v_storage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableload);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 490, 290));
+        add(jScrollPane1);
+        jScrollPane1.setBounds(360, 430, 450, 290);
 
-        inner4.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel3.setBackground(new java.awt.Color(243, 243, 243));
+
+        inner4.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel12.setText("Warehouse-JBR03");
 
         percentage03.setStringPainted(true);
 
-        jPanel6.setBackground(new java.awt.Color(255, 184, 51));
+        jPanel6.setBackground(new java.awt.Color(51, 153, 255));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -252,13 +247,13 @@ public class v_storage extends javax.swing.JPanel {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        inner5.setBackground(new java.awt.Color(255, 204, 51));
+        inner5.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel14.setText("Warehouse-JBR02");
 
         percentage02.setStringPainted(true);
 
-        jPanel7.setBackground(new java.awt.Color(255, 184, 51));
+        jPanel7.setBackground(new java.awt.Color(51, 153, 255));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -309,13 +304,13 @@ public class v_storage extends javax.swing.JPanel {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        inner6.setBackground(new java.awt.Color(255, 204, 51));
+        inner6.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel16.setText("Warehouse-JBR01");
 
         percentage01.setStringPainted(true);
 
-        jPanel8.setBackground(new java.awt.Color(255, 184, 51));
+        jPanel8.setBackground(new java.awt.Color(51, 153, 255));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -389,14 +384,14 @@ public class v_storage extends javax.swing.JPanel {
                 .addGap(63, 63, 63))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(capacity, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                     .addComponent(isi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -420,7 +415,8 @@ public class v_storage extends javax.swing.JPanel {
 
         jScrollPane2.setViewportView(jPanel3);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 340, 670));
+        add(jScrollPane2);
+        jScrollPane2.setBounds(10, 90, 340, 640);
 
         tabledistri.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -443,15 +439,18 @@ public class v_storage extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(tabledistri);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 490, 290));
+        add(jScrollPane3);
+        jScrollPane3.setBounds(360, 90, 450, 290);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Distribute");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 110, 30));
+        add(jLabel1);
+        jLabel1.setBounds(360, 60, 110, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Load");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 60, 30));
+        add(jLabel2);
+        jLabel2.setBounds(360, 390, 60, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInfowr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfowr1ActionPerformed
@@ -485,12 +484,12 @@ public class v_storage extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
