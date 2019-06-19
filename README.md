@@ -1,2 +1,1 @@
-# pbo2
-ciptaan tuhan yme
+SEMOGA YANG DISEGERAKAN
