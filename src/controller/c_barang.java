@@ -30,6 +30,7 @@ public class c_barang {
         this.model = model;
 
         view.setVisible(true);
+
         comboPemasok();
         view.getSubmit().addActionListener(new btnsubmit());
         view.getBack().addActionListener(new Buttonback());
@@ -54,18 +55,18 @@ public class c_barang {
             String kode = view.getKode_barang().getText();
             String namabrg = view.getNama_barang().getText();
             String jenisbrg = view.getJenis_barang().getText();
-           
+
             try {
-            brtbrg = Integer.parseInt(view.getBerat_barang().getText());    
+                brtbrg = Integer.parseInt(view.getBerat_barang().getText());
             } catch (Exception a) {
-            brtbrg = 0;
+                brtbrg = 0;
             };
             System.out.println();
-            
+
             String pemasok = view.getPemasok().getSelectedItem().toString();
-            
-            
-            if (kode.equalsIgnoreCase("") || namabrg.equalsIgnoreCase("") || jenisbrg.equalsIgnoreCase("") || brtbrg == 0 || pemasok.equalsIgnoreCase("")) {
+            if (kode.length() > 5) {
+                JOptionPane.showMessageDialog(null, "Kode tidak boleh lebih dari 5 digit");
+            } else if (kode.equalsIgnoreCase("") || namabrg.equalsIgnoreCase("") || jenisbrg.equalsIgnoreCase("") || brtbrg == 0 || pemasok.equalsIgnoreCase("")) {
                 JOptionPane.showMessageDialog(null, "Data tidak boleh kosong");
             } else {
                 int jawab = JOptionPane.showOptionDialog(null,
@@ -75,7 +76,7 @@ public class c_barang {
                         JOptionPane.QUESTION_MESSAGE, null, null, null);
 
                 if (jawab == JOptionPane.YES_OPTION) {
-                    model.simpanbarang(kode, namabrg, jenisbrg,brtbrg, pemasok);
+                    model.simpanbarang(kode, namabrg, jenisbrg, brtbrg, pemasok);
 //                        JOptionPane.showMessageDialog(null, "Pemasok berhasil disimpan");
                     clear();
                 }
@@ -94,8 +95,7 @@ public class c_barang {
             view.dispose();
         }
     }
-    
-    
+
     public void clear() {
         String clear = "";
         view.setNama_barang(clear);
@@ -104,4 +104,3 @@ public class c_barang {
         view.setBerat_barang(clear);
     }
 }
-

@@ -206,6 +206,10 @@ public class v_penerima extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_no_telppenerimaActionPerformed
 
+    public JButton getBack() {
+        return back;
+    }
+
     public JTextField getAlamat_penerima() {
         return alamat_penerima;
     }

@@ -33,8 +33,6 @@ public class v_service extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
@@ -246,18 +244,6 @@ public class v_service extends javax.swing.JPanel {
 
         jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 330, 80));
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No", "Nama barang", "Jenis barang", "Banyak barang", "Satuan", "Tujuan", "Penerima", "Keterangan"
-            }
-        ));
-        jScrollPane4.setViewportView(jTable4);
-
-        jPanel6.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 800, 190));
-
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -296,7 +282,7 @@ public class v_service extends javax.swing.JPanel {
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel17.setText("Load");
 
-        BtnLoad.setBackground(new java.awt.Color(255, 204, 51));
+        BtnLoad.setBackground(new java.awt.Color(102, 204, 255));
         BtnLoad.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         BtnLoad.setText("+");
         BtnLoad.setBorderPainted(false);
@@ -306,7 +292,7 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
-        editload.setBackground(new java.awt.Color(255, 204, 51));
+        editload.setBackground(new java.awt.Color(102, 204, 255));
         editload.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         editload.setText("Edit");
         editload.setBorderPainted(false);
@@ -323,13 +309,9 @@ public class v_service extends javax.swing.JPanel {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel17)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(BtnLoad)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(editload, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addComponent(editload, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(BtnLoad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,7 +320,7 @@ public class v_service extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel17)
                 .addGap(11, 11, 11)
-                .addComponent(editload, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                .addComponent(editload, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
         );
 
         jPanel6.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 70, 130));
@@ -348,7 +330,7 @@ public class v_service extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel6.setText("Distribute");
 
-        BtnDistribute.setBackground(new java.awt.Color(255, 204, 51));
+        BtnDistribute.setBackground(new java.awt.Color(102, 204, 255));
         BtnDistribute.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         BtnDistribute.setText("+");
         BtnDistribute.setBorderPainted(false);
@@ -358,7 +340,7 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
-        editdistribute.setBackground(new java.awt.Color(255, 204, 51));
+        editdistribute.setBackground(new java.awt.Color(102, 204, 255));
         editdistribute.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         editdistribute.setText("Edit");
         editdistribute.setBorderPainted(false);
@@ -375,12 +357,9 @@ public class v_service extends javax.swing.JPanel {
             .addComponent(BtnDistribute, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(editdistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(editdistribute, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -399,7 +378,7 @@ public class v_service extends javax.swing.JPanel {
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel18.setText("Barang");
 
-        btnbarang.setBackground(new java.awt.Color(255, 204, 51));
+        btnbarang.setBackground(new java.awt.Color(102, 204, 255));
         btnbarang.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         btnbarang.setText("+");
         btnbarang.setBorderPainted(false);
@@ -409,7 +388,7 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
-        editbrang.setBackground(new java.awt.Color(255, 204, 51));
+        editbrang.setBackground(new java.awt.Color(102, 204, 255));
         editbrang.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         editbrang.setText("Edit");
         editbrang.setBorderPainted(false);
@@ -426,13 +405,9 @@ public class v_service extends javax.swing.JPanel {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel18)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addComponent(btnbarang)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addComponent(editbrang, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(13, Short.MAX_VALUE))
+            .addComponent(editbrang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnbarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,7 +416,7 @@ public class v_service extends javax.swing.JPanel {
                 .addGap(7, 7, 7)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editbrang, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addComponent(editbrang, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel6.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 70, 130));
@@ -451,7 +426,7 @@ public class v_service extends javax.swing.JPanel {
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel37.setText("Pemasok");
 
-        btnpemasok.setBackground(new java.awt.Color(255, 204, 51));
+        btnpemasok.setBackground(new java.awt.Color(102, 204, 255));
         btnpemasok.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         btnpemasok.setText("+");
         btnpemasok.setBorderPainted(false);
@@ -461,7 +436,7 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
-        editpmasok.setBackground(new java.awt.Color(255, 204, 51));
+        editpmasok.setBackground(new java.awt.Color(102, 204, 255));
         editpmasok.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         editpmasok.setText("Edit");
         editpmasok.setBorderPainted(false);
@@ -476,14 +451,11 @@ public class v_service extends javax.swing.JPanel {
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnpemasok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(editpmasok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel37)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(editpmasok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnpemasok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -491,8 +463,8 @@ public class v_service extends javax.swing.JPanel {
                 .addComponent(btnpemasok)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editpmasok, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addComponent(editpmasok, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel6.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 70, 130));
@@ -502,7 +474,7 @@ public class v_service extends javax.swing.JPanel {
         jLabel38.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel38.setText("Penerima");
 
-        btnpenerima.setBackground(new java.awt.Color(255, 204, 51));
+        btnpenerima.setBackground(new java.awt.Color(102, 204, 255));
         btnpenerima.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         btnpenerima.setText("+");
         btnpenerima.setBorderPainted(false);
@@ -512,7 +484,7 @@ public class v_service extends javax.swing.JPanel {
             }
         });
 
-        editpenerima.setBackground(new java.awt.Color(255, 204, 51));
+        editpenerima.setBackground(new java.awt.Color(102, 204, 255));
         editpenerima.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         editpenerima.setText("Edit");
         editpenerima.setBorderPainted(false);
@@ -527,15 +499,11 @@ public class v_service extends javax.swing.JPanel {
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addComponent(btnpenerima)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel29Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel38)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addComponent(editpenerima, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(editpenerima, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnpenerima, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -549,16 +517,16 @@ public class v_service extends javax.swing.JPanel {
 
         jPanel6.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, 70, 130));
 
-        prntdistri.setBackground(new java.awt.Color(255, 204, 51));
+        prntdistri.setBackground(new java.awt.Color(102, 204, 255));
         prntdistri.setText("Print Distribute");
         prntdistri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prntdistriActionPerformed(evt);
             }
         });
-        jPanel6.add(prntdistri, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, 110, -1));
+        jPanel6.add(prntdistri, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 110, 30));
 
-        prntload.setBackground(new java.awt.Color(255, 204, 51));
+        prntload.setBackground(new java.awt.Color(102, 204, 255));
         prntload.setText("Print Load");
         prntload.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -761,9 +729,7 @@ public class v_service extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JCheckBox loadcekbox;
     private javax.swing.JButton prntdistri;

@@ -151,7 +151,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        btnLogin.setBackground(new java.awt.Color(255, 204, 51));
+        btnLogin.setBackground(new java.awt.Color(255, 255, 255));
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(58, 68, 88));
         btnLogin.setText("LOGIN");
@@ -164,7 +164,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        showPassword.setBackground(new java.awt.Color(255, 204, 51));
+        showPassword.setBackground(new java.awt.Color(255, 255, 255));
         showPassword.setForeground(new java.awt.Color(58, 68, 88));
         showPassword.setText("Show Password");
         showPassword.addActionListener(new java.awt.event.ActionListener() {

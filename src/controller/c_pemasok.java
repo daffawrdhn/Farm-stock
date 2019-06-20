@@ -55,7 +55,10 @@ public class c_pemasok {
             String almt_pmsk = view.getAlamat_pemasok().getText();
             String notlp = view.getNo_telp().getText();
             System.out.println(notlp);
-            if (kode_pmsk.equals("") || nama_pmsk.equals("") || almt_pmsk.equals("") || notlp.equals("")) {
+            if (kode_pmsk.length() > 5) {
+                JOptionPane.showMessageDialog(null, "Kode tidakboleh lebih dati 5 digit");
+            }
+            else if (kode_pmsk.equals("") || nama_pmsk.equals("") || almt_pmsk.equals("") || notlp.equals("")) {
                 JOptionPane.showMessageDialog(null, "Data tidak Boleh kosong");
             } else {
                 int jawab = JOptionPane.showOptionDialog(null,

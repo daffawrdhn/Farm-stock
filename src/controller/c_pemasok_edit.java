@@ -51,8 +51,9 @@ public class c_pemasok_edit {
             } catch (Exception e) {
                 id = 0;
             }
-
-            if (alamat.equalsIgnoreCase("") || kode.equalsIgnoreCase("") || notlp.equalsIgnoreCase("") || nama.equalsIgnoreCase("")) {
+            if (kode.length() > 5) {
+                JOptionPane.showMessageDialog(null, "Kode tidak boleh melebihi 5 digit");
+            } else if (alamat.equalsIgnoreCase("") || kode.equalsIgnoreCase("") || notlp.equalsIgnoreCase("") || nama.equalsIgnoreCase("")) {
                 JOptionPane.showMessageDialog(views, "Inputan Error/ Data Kosong");
 
             } else {

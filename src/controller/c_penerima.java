@@ -27,6 +27,19 @@ public class c_penerima {
         view.setVisible(true);
         
         view.getSubmit().addActionListener(new btnsubmit());
+        view.getBack().addActionListener(new ButtonBack());
+    }
+
+    private  class ButtonBack implements ActionListener {
+
+        public ButtonBack() {
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    view.dispose();
+        }
     }
 
     private class btnsubmit implements ActionListener {

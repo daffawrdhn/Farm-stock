@@ -103,14 +103,4 @@ public class c_Storage {
         }
     }
 
-    private class BtnEdit implements ActionListener {
-
-        public BtnEdit() {
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-        }
-    }
 }

@@ -128,9 +128,10 @@ public class c_Service {
             
             if (x == JFileChooser.APPROVE_OPTION) {
                 path = j.getSelectedFile().getPath();
+                model.tabelexportload(path);
             }
             
-            model.tabelexportload(path);
+            
         
         }
     }

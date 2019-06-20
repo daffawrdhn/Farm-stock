@@ -72,6 +72,7 @@ public class c_Service_Load {
             } catch (Exception ae) {
                 sum = 0;
             }
+            
             if (sum == 0) {
                 JOptionPane.showMessageDialog(null, "barang tidak boleh kosong");
             } else {
